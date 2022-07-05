@@ -1,3 +1,9 @@
+html.dark {
+    & .footer {
+        background-color: var(--themeColor);
+    }
+}
+
 .footer {
 
 

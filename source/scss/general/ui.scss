@@ -1,5 +1,15 @@
 .btn {
-
+    cursor: pointer;
+    display: block;
+    background: #0077F6;
+    border-radius: 0px 9px 9px 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(14px, 1.304vw, 15.3016px);
+    line-height: 125%;
+    color: #FFFFFF;
+    padding: 9.2px 15px 8.8px;
 }
 
 .title {

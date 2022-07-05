@@ -4,9 +4,8 @@ margin-top: 35px;
     }
     &___body {
         background: var(--themeColor2);
-        border: 1px solid var(--tableBorder);
         border-radius: 9px;
-        padding-bottom: 50px;
+        overflow: hidden;
 
         & table {
             width: 100%;
@@ -70,7 +69,10 @@ margin-top: 35px;
     }
     &___table {
         padding: 0 17px;
-
+        border: 1px solid var(--tableBorder);
+        border-radius: 0 0 9px 9px;
+        padding-bottom: 50px;
+        padding-top: 10px;
     }
     &___tbody {
         overflow: auto;
@@ -92,6 +94,7 @@ margin-top: 35px;
     &__title {
         background: var(--themeColor2);
         border-color: var(--tableBorder);
+        margin-bottom: -10px;
     }
     .block-title {
     }

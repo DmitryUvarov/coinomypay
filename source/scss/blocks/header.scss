@@ -1,6 +1,7 @@
 html.dark {
     & .header {
         border-bottom: 1px solid #18297B;
+        background-color: var(--themeColor);
 
         &::before {
             background-color: #18297B !important;

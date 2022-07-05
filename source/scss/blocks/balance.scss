@@ -1,0 +1,313 @@
+
+
+.balance {
+    padding-top: 45px;
+    padding-bottom: 40px;
+    &__container {
+    }
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        row-gap: 15px;
+        column-gap: 25px;
+    }
+    &__overall {
+        background-color: var(--themeColor2);
+        & .top-balance {
+            margin-bottom: -10px;
+        }
+        & .bottom-balance {
+            border: 1px solid var(--tableBorder);
+            border-radius: 0 0 9px 9px;
+        }
+    }
+    &__cryptocurrency {
+        background-color: var(--themeColor2);
+        & .top-balance {
+            margin-bottom: -10px;
+        }
+        & .bottom-balance {
+            border: 1px solid var(--tableBorder);
+            border-radius: 0 0 9px 9px;
+        }
+    }
+    &__promocode {
+        background-color: var(--themeColor2);
+        & .top-balance {
+            border: 0;
+        }
+    }
+    &__metamask {
+    }
+
+    & .title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+
+    }
+}
+
+.overall {
+    display: flex;
+    flex-direction: column;
+    &__top {
+    }
+    &__title {
+    }
+    &__bottom {
+        flex-basis: 100%;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__balance {
+        margin-top: auto;
+        & span {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 30.7674px;
+            line-height: 123%;
+            color: var(--mainColor);
+            text-align: center;
+            margin-bottom: 6px;
+        }
+        @media (max-width: 992px) {
+            margin-bottom: 10px;
+        }
+    }
+    &__total {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #28C700;
+        text-align: center;
+        @media (max-width: 992px) {
+            margin-bottom: 30px;
+        }
+    }
+    &__buttons {
+        margin-top: auto;
+        display: flex;
+        @media (max-width: 992px) {
+            display: flex;
+            width: 100%;
+        }
+    }
+    &__btn {
+        cursor: pointer;
+        display: block;
+        border-radius: 9px 0px 0px 9px;
+        padding: 8px 75px;
+        width: 100%;
+        color: #fff;
+        display: inline;
+
+        @media (max-width: 992px) {
+            padding: 8px 15px;
+        }
+    }
+
+    & button.depsit {
+        background: linear-gradient(90.89deg, #013EDD 0%, #2E67FE 100%);
+        transform: translateX(3px);
+    }
+    & button.withdraw {
+        background: linear-gradient(90.89deg, #DD0D54 0%, #FF4383 100%);
+        border-radius: 0px 9px 9px 0px;
+        transform: translateX(-3px);
+    }
+}
+
+.top-balance {
+    z-index: 10;
+    position: relative;
+    background-color: var(--themeColor2);
+    padding: 25px 18px;
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--tableBorder);
+    border-radius: 8px;
+    z-index: 10;
+    &__btn {
+        cursor: pointer;
+        display: block;
+        padding: 5px 16px;
+        border: 1px solid var(--tableBody);
+        border-radius: 6px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 122%;
+        color: var(--footerGray);
+    }
+}
+
+.title {
+}
+
+.tran-btn {
+}
+
+
+
+.cryptocurrency {
+    &__top {
+    }
+    &__bottom {
+        min-height: 300px;
+        padding: 30px;
+        @media (max-width: 767px) {
+            padding: 30px 20px;
+        }
+
+    }
+}
+
+.currency {
+    &__item {
+        padding: 17px 18px;
+        border: 1px solid var(--tableBorder);
+        border-radius: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+    &__name {
+        display: flex;
+        align-items: center;
+        & span {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 122%;
+            color: var(--mainColor);
+            margin-left: 12px;
+        }
+    }
+    &__num {
+        & span {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 122%;
+            color: var(--mainColor);
+
+        }
+    }
+}
+
+
+.promocode {
+    background: var(--themeColor2);
+    border: 1px solid var(--tableBorder);
+    border-radius: 9px;
+    &__top {
+        border: 0;
+    }
+    &__title {
+    }
+    &__bottom {
+        padding: 0 20px;
+        @media (max-width: 991px) {
+            padding: 30px 20px;
+        }
+    }
+    &__form {
+    }
+}
+
+.form-promocode {
+    display: flex;
+    &__input {
+        background: var(--themeColor2);
+        border: 1px solid var(--tableBorder);
+        border-radius: 9px 0 0 9px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12.34px;
+        line-height: 125%;
+        color: var(--mainColor);
+        padding: 11px 18px;
+
+        &::placeholder {
+            color: var(--mainColor);
+        }
+    }
+    &__btn {
+        padding: 10.4px 15px 10px;
+        font-size: 15.3016px;
+    }
+    &__fieldset--input {
+        flex-basis: 100%;
+    }
+}
+
+.btn {
+}
+
+.metamask {
+    background: linear-gradient(270deg, #D56425 0%, #F99157 100%);
+    border-radius: 9px;
+    display: flex;
+    padding: 0 20px;
+
+    @media (max-width: 992px) {
+        padding: 0 10px;
+    }
+    &__image {
+        flex-shrink: 0;
+        align-self: center;
+    }
+    &__content {
+        padding: 16px 0;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 992px) {
+            padding: 10px 0;
+        }
+    }
+    &__title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: clamp(15px, 1.739vw, 20px);
+        line-height: 24px;
+        color: #FFFFFF;
+        margin-bottom: 5px;
+
+    }
+    &__text {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: clamp(10px, 1.304vw, 15px);
+        line-height: 18px;
+
+        color: #E4E4E4;
+        margin-bottom: 13px;
+    }
+    &__btn {
+        border-radius: 9px;
+        align-self: flex-end;
+    }
+}
