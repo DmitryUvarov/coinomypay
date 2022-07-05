@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+html.light {
+  background-color: var(--bgColor);
+}
+html.dark {
+  background-color: var(--bgColor);
+}
+
 html,
 body {
     margin: 0;
@@ -16,7 +23,7 @@ body {
 
 
 .container {
-  max-width: 1470px;
+  max-width: 1180px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
@@ -66,7 +73,7 @@ a:not([class]) {
     font-family: $fontFamily;
     font-style: normal;
     font-size: $fontSize;
-    color: $textColor;
+    color: var(--mainColor);
     line-height: 140%;
 }
 
@@ -74,7 +81,7 @@ p:not([class]) {
     font-family: $fontFamily;
     font-style: normal;
     font-size: $fontSize;
-    color: $textColor;
+    color: var(--mainColor);
     line-height: 140%;
 }
 

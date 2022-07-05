@@ -9,25 +9,47 @@
                 </a></div>
             <nav class="header__menu menu">
                 <ul class="menu__list">
-                    <li class="menu__item"><a href="#">Trading</a></li>
-                    <li class="menu__item"><a href="#">Market tools</a></li>
-                    <li class="menu__item"><a href="#">Invest</a></li>
-                    <li class="menu__item"><a href="#">Referal Program </a></li>
-                    <li class="menu__item"><a href="#">Referal Program </a></li>
-                    <li class="menu__item"><a href="#">Wallets</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Trading</a></li>
+                    <li class="menu__item menu__arrow"><a class="menu__link" class="resr" href="#">Market tools</a>
+                        <svg width="7.5" height="5">
+                            <use xlink:href="img/sprite.svg#arrow-down"></use>
+                        </svg>
+                        <ul class="menu__sublist">
+                            <li class="menu__subitem"><a href="#">Market tools</a></li>
+                            <li class="menu__subitem"><a href="#">Market tools</a></li>
+                            <li class="menu__subitem"><a href="#">Market tools</a></li>
+                            <li class="menu__subitem"><a href="#">Market tools</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item"><a class="menu__link" href="#">Invest</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Referal Program </a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Referal Program </a></li>
+                    <li class="menu__item menu__arrow"><a href="#">Wallets</a>
+                        <svg width="7.5" height="5">
+                            <use xlink:href="img/sprite.svg#arrow-down"></use>
+                        </svg>
+                        <ul class="menu__sublist">
+                            <li class="menu__subitem"><a href="#">Market tools</a></li>
+                            <li class="menu__subitem"><a href="#">Market tools</a></li>
+                            <li class="menu__subitem"><a href="#">Market tools</a></li>
+                            <li class="menu__subitem"><a href="#">Market tools</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
-            <div class="header__profile profile">
+            <div id="profile" data-href="/index.html" class="header__profile profile" data-da=".header__menu,600,2">
                 <div class="profile__btn">
                     <span>Magpie</span>
-                    <img src="img/profile.png" width="33" height="33" alt="profile">
+                    <div class="profile__img">
+                        <img src="img/profile.png" width="33" height="33" alt="profile">
+                    </div>
                     <div class="profile__sublist">
                         <div class="profile__info info-profile">
                             <div class="info-profile__image">
                                 <img src="img/profile-big.png" width="69" height="69" alt="prolife">
                             </div>
                             <div class="info-profile__user">
-                                <div class="info-profile__name"></div>
+                                <div class="info-profile__name">Magpie</div>
                                 <span class="info-profile__login">test@gmail.com</span>
                                 <span class="info-profile__id">Transfer ID: <span>1231231231</span></span>
                             </div>

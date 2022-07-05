@@ -3,17 +3,24 @@ $fontSize: 16px;
 
 
 html.dark {
-    $mainColor: #000;
-    $grey: #6B6B6B;
-    $white: #fff;
-    $textColor: #000;
+    --mainColor: #fff;
+    --grey: #6B6B6B;
+    --white: #fff;
+    --textColor: #fff;
+    --themeColor: #0E1A48;
+    --hoverText: #1E68FF;
+
+    --bgColor: #242424;
 }
 html.light {
-    $mainColor: #fff;
-    $grey: #6B6B6B;
-    $white: #fff;
-    $textColor: #fff;
+    --mainColor: #000;
+    --grey: #6B6B6B;
+    --white: #fff;
+    --textColor: #000;
+    --themeColor: #fff;
+    --hoverText: #1346CC;
 
+    --bgColor: #fff;
 }
 
 
