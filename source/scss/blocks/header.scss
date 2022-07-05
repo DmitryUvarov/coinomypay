@@ -1,0 +1,140 @@
+.header {
+    transition: all .3s ease;
+
+    &.fixed {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 50;
+    }
+
+
+
+    &__container {
+        max-width: 1890px;
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+    &__body {
+        display: flex;
+    }
+    &__logo {
+    }
+    &__menu {
+    }
+    &__profile {
+    }
+}
+
+
+
+
+.menu {
+
+    &__list {
+
+        display: flex;
+
+    }
+    &__item {
+
+        & a {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15.619px;
+            line-height: 126%;
+            color: $mainColor;
+        }
+    }
+
+}
+
+
+.profile {
+
+
+    &__btn {
+    }
+    &__sublist {
+    }
+    &__info {
+    }
+    &__links {
+    }
+    &__link {
+    }
+}
+
+.info-profile {
+
+
+    &__image {
+    }
+    &__user {
+    }
+    &__name {
+    }
+    &__login {
+    }
+    &__id {
+    }
+}
+
+.burger {
+}
+
+
+
+
+.burger {
+    display: none;
+}
+@media (max-width: 991px) {
+    body {
+        &.active .burger{
+            span {
+                transform: scale(0);
+                &:first-child {
+                    transform: rotate(-45deg);
+                    top: calc(50% - 0.75px);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:last-child {
+                    transform: rotate(45deg);
+                    top: calc(50% - 0.75px);
+                }
+            }
+        }
+    }
+    .burger {
+        position: relative;
+            display: block;
+            width: 26px;
+            height: 20px;
+            cursor: pointer;
+            z-index: 1001;
+
+            span {
+                transition: all 0.3s ease 0s;
+                left: 0px;
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                background-color: #000;
+                &:first-child {
+                    top: 0px;
+                }
+                &:nth-child(2) {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &:last-child {
+                    bottom: 0;
+                }
+            }
+    }
+}

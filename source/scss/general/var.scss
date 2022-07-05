@@ -1,0 +1,22 @@
+$fontFamily: "Inter";
+$fontSize: 16px;
+
+
+html.dark {
+    $mainColor: #000;
+    $grey: #6B6B6B;
+    $white: #fff;
+    $textColor: #000;
+}
+html.light {
+    $mainColor: #fff;
+    $grey: #6B6B6B;
+    $white: #fff;
+    $textColor: #fff;
+
+}
+
+
+$minWidth: 375;
+$maxWidth: 1150;
+$maxWidthContainer: 1180; // ширина контейнера у проекта без px
