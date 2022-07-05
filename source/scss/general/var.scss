@@ -8,9 +8,18 @@ html.dark {
     --white: #fff;
     --textColor: #fff;
     --themeColor: #0E1A48;
+    --themeColor2: #18297B;
     --hoverText: #1E68FF;
 
-    --bgColor: #242424;
+    --bgColor: #0A1133;
+
+    --checGray: #fff;
+
+    --tableHead: #8B97C1;
+    --tableBody: #fff;
+    --tableBorder: #1A66FF;
+
+    --footerGray: #fff;
 }
 html.light {
     --mainColor: #000;
@@ -18,9 +27,18 @@ html.light {
     --white: #fff;
     --textColor: #000;
     --themeColor: #fff;
+    --themeColor2: #fff;
     --hoverText: #1346CC;
 
     --bgColor: #fff;
+
+    --checGray: #6B6B6B;
+
+    --tableHead: #6B6B6B;
+    --tableBody: #6B6B6B;
+    --tableBorder: #D9D9D9;
+
+    --footerGray: #6B6B6B;
 }
 
 

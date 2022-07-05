@@ -1,0 +1,46 @@
+.create-token {
+
+
+    &__container {
+    }
+    &__body {
+        background: var(--themeColor2);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    &__title {
+        margin-bottom: -5px;
+        background: var(--themeColor2);
+        border-color: var(--tableBorder);
+    }
+    &__form {
+        border: 1px solid var(--tableBorder);
+        border-radius: 0 0 8px 8px;
+        padding: 30px 20px 20px;
+    }
+    &__fieldset {
+    }
+    .fieldset-checkbox {
+
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 18px;
+        row-gap: 14px;
+    }
+    &__checkbox {
+    }
+    &__btn {
+        cursor: pointer;
+        display: block;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+        background: #0077F6;
+        border-radius: 6px;
+        padding: 5px 6px;
+        margin-top: 25px;
+    }
+}

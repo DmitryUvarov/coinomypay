@@ -75,7 +75,7 @@ window.onload = function () {
             if (targerElement.closest("#profile")) {
                 targerElement.closest('#profile').classList.toggle('active');
             }
-            if (!targerElement.closest("#profile")) {
+            if (!targerElement.closest("#profile") && document.querySelector('#profile.active')) {
                 console.log("test");
                 console.log(targerElement);
                 let profileActive = document.querySelector('#profile.active');
@@ -90,17 +90,6 @@ window.onload = function () {
 
 }
 
-// fixed header
-let header = document.querySelector("header");
-window.addEventListener("scroll", () => {
-    let scrollTop = window.scrollY;
-    if (scrollTop >= 1) {
-        header.classList.add("fixed");
-    } else if (scrollTop <= 0) {
-        header.classList.remove("fixed");
-    }
-});
-//  \\\
 
 
 // buger

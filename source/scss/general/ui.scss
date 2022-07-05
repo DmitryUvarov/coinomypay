@@ -10,3 +10,61 @@
     line-height: 122%;
     color: var(--mainColor);
 }
+
+
+.block-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16.9565px;
+    line-height: 131%;
+    color: var(--mainColor);
+    padding: 12px 20px 14px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    background-color: var(--themeColor);
+}
+
+
+
+html.dark {
+    .checkbox-label input {
+        border: 1px solid #0077F6;
+    }
+    .checkbox-label input:checked ~ span {
+        color: #fff;
+    }
+    .checkbox-label span {
+        color: #8B97C1;
+    }
+}
+.checkbox-label {
+
+    display: flex;
+    align-items: center;
+    width: max-content;
+
+
+
+    & input {
+        position: relative;
+        width: 17px;
+        height: 17px;
+        border: 1px solid #6B6B6B;
+        border-radius: 3px;
+
+    }
+    & span {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.619px;
+        line-height: 126%;
+        color: var(--checGray);
+        white-space: nowrap;
+        margin-left: 6px;
+    }
+}

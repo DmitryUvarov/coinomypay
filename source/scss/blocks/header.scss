@@ -1,4 +1,20 @@
+html.dark {
+    & .header {
+        border-bottom: 1px solid #18297B;
 
+        &::before {
+            background-color: #18297B !important;
+        }
+    }
+    & .menu__item.menu__arrow {
+        & svg {
+            fill: #fff;
+        }
+    }
+    & .header .profile__btn > span {
+        color: #B1B1B1 !important;
+    }
+}
 body.active {
     & .menu {
         left: 0;
@@ -39,18 +55,8 @@ body.active {
         width: 100%;
         top: 0;
         z-index: 50;
-
-        &::after {
-            content: "";
-            position: absolute;
-            display: block;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-color: var(--themeColor);
-            z-index: 11;
-        }
+        transition: all .3s ease;
+        background-color: var(--themeColor);
     }
 
 
@@ -67,23 +73,7 @@ body.active {
         padding: 14px 0;
     }
     &__logo {
-        z-index: 20;
-        & a {
-            display: flex;
-            align-items: center;
-        }
 
-
-        & span {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 17.5714px;
-            line-height: 123%;
-            color: #0051F4;
-            margin-left: 11px;
-
-        }
     }
     &__menu {
     }
@@ -91,7 +81,25 @@ body.active {
         z-index: 20;
     }
 }
+ .logo {
+    z-index: 20;
+    & a {
+        display: flex;
+        align-items: center;
+    }
 
+
+    & span {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17.5714px;
+        line-height: 123%;
+        color: #0051F4;
+        margin-left: 11px;
+
+    }
+ }
 
 
 
@@ -110,7 +118,7 @@ body.active {
         height: 100%;
         overflow: auto;
         transition: left .3s ease;
-        background-color: var(--white);
+        background-color: var(--bgColor);
         z-index: 10;
         padding: 100px 20px 40px;
 
@@ -175,6 +183,9 @@ body.active {
             & .menu__sublist {
                 display: block;
             }
+            & > a {
+                color: #1346CC;
+            }
         }
 
         &:last-child {
@@ -182,6 +193,7 @@ body.active {
         }
     }
     &__sublist {
+        z-index: 50;
         position: absolute;
         display: none;
         top: calc(100% + 7px);
@@ -189,6 +201,7 @@ body.active {
         background: #FFFFFF;
         border: 1px solid #1346CC;
         border-radius: 5px;
+        background-color: var(--bgColor);
 
         @media (max-width: 991px) {
             position: relative;
@@ -208,7 +221,7 @@ body.active {
             font-weight: 400;
             font-size: 12.1776px;
             line-height: 125%;
-            color: var(--grey);
+            color: var(--checGray);
         }
         @media (max-width: 991px) {
             border: 0;
@@ -269,6 +282,7 @@ body.active {
         border-radius: 50%;
     }
     &__sublist {
+        z-index: 50;
         position: absolute;
         min-width: 290px;
         top: calc(100% + 12px);
@@ -289,9 +303,7 @@ body.active {
     }
     &__link {
         border-bottom: 1px solid #D9D9D9;
-        &:not(:last-child) {
-            margin-top: 10px;
-        }
+        margin-top: 10px;
         & a {
 
             font-family: 'Inter';
@@ -299,7 +311,7 @@ body.active {
             font-weight: 400;
             font-size: 20.3842px;
             line-height: 125%;
-            color: var(--grey);
+            color: var(--checGray);
 
             transition: color .3s ease;
             @media (any-hover: hover) {
