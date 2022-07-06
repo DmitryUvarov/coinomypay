@@ -112,7 +112,7 @@ window.addEventListener("load", windowLoad);
 function windowLoad() {
 
     console.log('ree')
-    const htm1Block = document.documentElement;
+    const htmlBlock = document.documentElement;
 
     const saveUserTheme = localStorage.getItem('user-theme');
 
@@ -131,7 +131,7 @@ function windowLoad() {
     const resetButton = document.querySelector('.page_reset');
     if (themeButton) {
         themeButton.addEventListener("click", function (e) {
-            resetButton.classList.add('active');
+            // resetButton.classList.add('active');
             changeTheme(true);
         });
     }
@@ -144,16 +144,17 @@ function windowLoad() {
 
     function setThemeClass() {
         if (saveUserTheme) {
-            htm1Block.classList.add(saveUserTheme)
+            htmlBlock.classList.add(saveUserTheme)
             resetButton.classList.add('active');
         } else {
-            htm1Block.classList.add(userTheme);
+            htmlBlock.classList.add(userTheme);
         }
     }
     setThemeClass();
 
 
     function changeTheme(saveTheme = false) {
+
         let currentTheme = htmlBlock.classList.contains('light') ? 'light' : 'dark';
         let newTheme;
 
@@ -164,7 +165,7 @@ function windowLoad() {
         }
 
 
-        htm1Block.classList.remove(currentTheme);
+        htmlBlock.classList.remove(currentTheme);
         htmlBlock.classList.add(newTheme);
         saveTheme ? localStorage.setItem('user-theme', newTheme) : null;
     }
