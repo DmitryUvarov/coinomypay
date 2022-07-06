@@ -1,0 +1,61 @@
+.transactions-history {
+
+    &__container {
+    }
+    &__body {
+        margin: 40px 0;
+    }
+    &__title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16.9565px;
+        line-height: 131%;
+        color: var(--mainColor);
+        padding: 14px 18px;
+        background: var(--themeColor2);
+        border: 1px solid var(--tableBorder);
+        border-radius: 8px;
+        margin-bottom: -20px;
+        position: relative;
+        z-index: 3;
+    }
+    &__content {
+        background: var(--themeColor2);
+        padding: 10px 0 0;
+    }
+    .table {
+    }
+    .tbody {
+
+        & th, & td {
+            color: var(--footerGray);
+        }
+        & tbody th{
+            padding: 9px 16px;
+        }
+        & tbody td{
+            padding: 7.5px 16px;
+
+        }
+        & tbody {
+            box-shadow: none;
+        }
+        & .success{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15.619px;
+            line-height: 126%;
+            color: #28C700;
+        }
+        & .canceled{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15.619px;
+            line-height: 126%;
+            color: #ED4343;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        @@include('_header.html', {
+        "nav": true
+        })
+
+        <main>
+            <section class="info">
+                <div class="info__container container">
+                    <div class="info__body">
+                        <div class="info__text">
+                            <h1 class="info__title title">Coinomypay Invest</h1>
+                            <p class="info__content">Thank you for your interest in Coinomypay Invest.
+                                Invest gives you the opportunity to earn rewards
+                                for your cash and crypto assets. Start investing
+                                in just a couple of clicks and automatically receive
+                                rewards after the end of the investment period.
+                                You can return the funds that you have invested
+                                at any time without penalty.</p>
+                        </div>
+                        <div class="info__image">
+                            <img src="img/invest01.png" width="434" height="381.2" alt="img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="information">
+                <div class="information__container container">
+                    <div class="information__body">
+                        <h4 class="information__title title">Important Information</h4>
+                        <div class="information__content">
+                            <div class="information__item"><span>You can stake any investment plan available to you. After depositing coins into any of the plans, the profit will be automatically transferred to your balance after the expiration
+                                    of the selected plan.</span></div>
+                            <div class="information__item"><span>The profit is calculated in real time, for this you need to refresh the page.</span></div>
+                            <div class="information__item"><span>If you return the funds back before the investment plan, your earnings will be lost</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+        @@include('_footer.html')
+    </div>
+
+    @@include('_js.html')
+</body>
+
+</html>

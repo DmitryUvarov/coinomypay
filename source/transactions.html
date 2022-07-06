@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        @@include('_header.html', {
+        "nav": true
+        })
+
+        <main>
+            @@include('_balance-nav.html', {
+            "link": "1"
+            })
+
+
+            <section class="transactions-history">
+                <div class="transactions-history__container container">
+                    <div class="transactions-history__body">
+                        <div class="transactions-history__title">Transactions History</div>
+                        <div class="transactions-history__content">
+                            <div class="table">
+                                <div class="tbody">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Transfer ID</th>
+                                                <th>Time </th>
+                                                <th>Type</th>
+                                                <th>Amount</th>
+                                                <th>Status</th>
+                                                <th>Balance</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>#56584554520</td>
+                                                <td>2022-06-29 00:03:18</td>
+                                                <td>Withdraw</td>
+                                                <td>1 BTC</td>
+                                                <td class="success canceled">Canceled</td>
+                                                <td>1.94088 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>#56584554520</td>
+                                                <td>2022-06-29 00:03:18</td>
+                                                <td>Withdraw</td>
+                                                <td>1 BTC</td>
+                                                <td class="success canceled">Canceled</td>
+                                                <td>1.94088 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>#56584554520</td>
+                                                <td>2022-06-29 00:03:18</td>
+                                                <td>Withdraw</td>
+                                                <td>1 BTC</td>
+                                                <td class="success canceled">Canceled</td>
+                                                <td>1.94088 BTC</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        @@include('_footer.html')
+    </div>
+
+    @@include('_js.html')
+</body>
+
+</html>
