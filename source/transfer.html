@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        @@include('_header.html', {
+        "nav": true
+        })
+
+        <main>
+            @@include('_balance-nav.html', {
+            "link": "4"
+            })
+
+            <section class="transfer">
+                <div class="transfer__container container">
+                    <div class="transfer__body">
+                        <h1 class="transfer__title title">Transfer</h1>
+                        <div class="transfer__tabs">
+                            <div class="tabs__nav">
+                                <button class="tabs__nav-btn active" type="button" data-tab="#tab_1">New transfer</button>
+                                <button class="tabs__nav-btn" type="button" data-tab="#tab_2">History</button>
+                            </div>
+                            <div class="tabs__content">
+                                <div class="tabs__item active" id="tab_1">
+                                    <form action="#" class="form-tabs">
+                                        <fieldset class="form-tabs__fieldset">
+                                            <div class="form-tabs__text">
+                                                <div class="form-tabs__title">Select currency</div>
+                                                <div class="form-tabs__subtitle">Choose a cryptocurrency for transfer</div>
+                                            </div>
+                                            <div class="form-tabs__input">
+                                                <input type="text" placeholder="Bitcoin - 0 BTC">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form-tabs__fieldset">
+                                            <div class="form-tabs__text">
+                                                <div class="form-tabs__title">User E-Mail</div>
+                                                <div class="form-tabs__subtitle">Enter the user's E-Mail or Transfer ID for this site</div>
+                                            </div>
+                                            <div class="form-tabs__input">
+                                                <input type="text" placeholder="Please enter user E-Mail or ID">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form-tabs__fieldset">
+                                            <div class="form-tabs__text">
+                                                <div class="form-tabs__title">Amount</div>
+                                                <div class="form-tabs__subtitle">Enter correctly amount</div>
+                                            </div>
+                                            <div class="form-tabs__input">
+                                                <input type="text" placeholder="Please enter an amount">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form-tabs__fieldset form-tabs__fieldset--btn">
+                                            <button class="form-tabs__btn btn">Transfer Now</button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div class="tabs__item" id="tab_2">
+                                    <div class="table">
+                                        <div class="tbody">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Transfer ID</th>
+                                                        <th>Time </th>
+                                                        <th>User E-Mail</th>
+                                                        <th>Amount</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>#56584554520</td>
+                                                        <td>2022-06-29 00:03:18</td>
+                                                        <td>Test.Test.Test1@mail.ru</td>
+                                                        <td>1 BTC</td>
+                                                        <td class="success canceled">Canceled</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#56584554520</td>
+                                                        <td>2022-06-29 00:03:18</td>
+                                                        <td>Test.Test.Test1@mail.ru</td>
+                                                        <td>1 BTC</td>
+                                                        <td class="success canceled">Canceled</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#56584554520</td>
+                                                        <td>2022-06-29 00:03:18</td>
+                                                        <td>Test.Test.Test1@mail.ru</td>
+                                                        <td>1 BTC</td>
+                                                        <td class="success canceled">Canceled</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        @@include('_footer.html')
+    </div>
+
+    @@include('_js.html')
+</body>
+
+</html>

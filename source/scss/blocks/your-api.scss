@@ -7,89 +7,7 @@ margin-top: 35px;
         border-radius: 9px;
         overflow: hidden;
 
-        & table {
-            width: 100%;
-        }
-        & th , & td {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: clamp(14px, 1.304vw, 15px);
-            line-height: 126%;
-            text-align: start;
-            transition: all .3s ease;
-            white-space: nowrap;
-        }
-        & thead {
-            & th {
-                padding: 15px 16px;
-                color: var(--tableHead);
-            }
-        }
-        & tbody {
-            box-shadow: 0 0 0 1px var(--tableBorder) inset;
-            border-radius: 8px;
-            & td {
-                padding: 15px 16px;
-                color: var(--tableBody);
-            }
 
-            & svg {
-                margin-right: 5px;
-            }
-            & .status {
-                position: relative;
-                width: 40px;
-                height: 15px;
-                background: #D9D9D9;
-                border-radius: 57px;
-                transition: all .3s ease;
-                &::before {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 15px;
-                    height: 15px;
-                    border-radius: 50%;
-                    background: #6B6B6B;
-                }
-
-                &.active {
-                    background: #0077F6;
-
-                    &::before {
-                        left: auto;
-                        right: 0;
-                    }
-                }
-            }
-        }
-    }
-    &___table {
-        padding: 0 17px;
-        border: 1px solid var(--tableBorder);
-        border-radius: 0 0 9px 9px;
-        padding-bottom: 50px;
-        padding-top: 10px;
-    }
-    &___tbody {
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
-
-
-        &::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        &::-webkit-scrollbar-track {
-            background-color: #d3d3d3;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background-color: #0077f6;
-        }
     }
     &__title {
         background: var(--themeColor2);
@@ -97,5 +15,93 @@ margin-top: 35px;
         margin-bottom: -10px;
     }
     .block-title {
+    }
+}
+
+
+.table {
+    padding: 0 17px;
+    border: 1px solid var(--tableBorder);
+    border-radius: 0 0 9px 9px;
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+.tbody {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+
+    &::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #d3d3d3;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #0077f6;
+    }
+
+
+
+    & table {
+        width: 100%;
+    }
+    & th , & td {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(14px, 1.304vw, 15px);
+        line-height: 126%;
+        text-align: start;
+        transition: all .3s ease;
+        white-space: nowrap;
+    }
+    & thead {
+        & th {
+            padding: 15px 16px;
+            color: var(--tableHead);
+        }
+    }
+    & tbody {
+        box-shadow: 0 0 0 1px var(--tableBorder) inset;
+        border-radius: 8px;
+        & td {
+            padding: 15px 16px;
+            color: var(--tableBody);
+        }
+
+        & svg {
+            margin-right: 5px;
+        }
+        & .status {
+            position: relative;
+            width: 40px;
+            height: 15px;
+            background: #D9D9D9;
+            border-radius: 57px;
+            transition: all .3s ease;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background: #6B6B6B;
+            }
+
+            &.active {
+                background: #0077F6;
+
+                &::before {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
     }
 }

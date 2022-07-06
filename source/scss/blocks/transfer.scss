@@ -1,0 +1,196 @@
+.transfer {
+    padding: 45px 0 15px;
+    &__container {
+    }
+    &__body {
+    }
+    &__title {
+        position: relative;
+        background: var(--themeColor2);
+        font-weight: 600;
+        font-size: clamp(14px, 1.391vw, 16.9565px);
+        line-height: 123%;
+        color: var(--mainColor);
+        border: 1px solid var(--tableBorder);
+        border-radius: 8px;
+        margin-bottom: -10px;
+        padding: 15px 18px 25px;
+    }
+
+    &__tabs {
+        background: var(--themeColor2);
+        border: 1px solid var(--tableBorder);
+        border-radius: 0 0 9px 9px;
+        padding-top: 45px;
+        .tabs__nav {
+            margin: 0 10px;
+            display: flex;
+            border-bottom: 1px solid var(--tableBorder);
+        }
+        .tabs__nav-btn {
+            margin-bottom: -1px;
+            cursor: pointer;
+            display: block;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: clamp(14px, 1.304vw, 15px);
+            line-height: 126%;
+            color: #6B6B6B;
+            padding: 9px 18px;
+            border: 1px solid var(--tableBorder);
+            transition: all .3s ease;
+            &.active {
+                background: var(--tabBtn);
+                color: #fff;
+            }
+        }
+        .tabs__content {
+        }
+        .tabs__item {
+        }
+    }
+
+    & .table {
+        border: 0;
+        padding: 0 70px 15px;
+
+        @media (max-width: 991px) {
+            padding: 0 20px 15px;
+        }
+        @media (max-width: 767px) {
+            padding: 0 15px 15px;
+        }
+    }
+    & .tbody tbody{
+        box-shadow: none;
+    }
+    & .tbody tbody th{
+        padding: 9px 16px;
+    }
+    & .tbody tbody td{
+        padding: 7.5px 16px;
+
+    }
+    & .tbody .success{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.619px;
+        line-height: 126%;
+        color: #28C700;
+    }
+    & .tbody .canceled{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.619px;
+        line-height: 126%;
+        color: #ED4343;
+    }
+}
+
+
+
+
+.form-tabs {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 0 50px;
+    @media (max-width: 991px) {
+        padding: 60px 20px 30px;
+    }
+    @media (max-width: 767px) {
+        padding: 40px 20px 25px;
+    }
+    &__fieldset {
+        display: flex;
+        column-gap: 20px;
+        justify-content: space-between;
+        &:not(:first-child) {
+            margin-top: 37px;
+        }
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
+
+        }
+
+    }
+    &__text {
+        max-width: 240px;
+    }
+    &__title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: clamp(12px, 1.217vw, 14px);
+        line-height: 130%;
+        color: var(--testPurp);
+
+        @media (max-width: 767px) {
+            margin-bottom: 4px;
+        }
+    }
+    &__subtitle {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10.1376px;
+        line-height: 120%;
+        color: var(--testPurp);
+    }
+    &__input {
+        max-width: 343px;
+        width: 100%;
+        & input {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12.3439px;
+            line-height: 125%;
+            color: var(--tableBody);
+            padding: 6px 18px;
+            border: 1px solid var(--tableBorder);
+            border-radius: 9px;
+            background-color: var(--bgColor);
+            &::placeholder {
+                color: var(--tableBody);
+            }
+
+
+        }
+
+        @media (max-width: 767px) {
+            max-width: none;
+            margin-top: 8px;
+            flex-basis: 100%;
+        }
+    }
+    &__fieldset--btn {
+        margin-top: 30px;
+    }
+    &__btn {
+        padding: 5px 17px;
+        margin-left: auto;
+        font-size: 18px;
+        line-height: 122%;
+        border-radius: 6px;
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+    }
+}
+
+
+
+.your-api___table {
+}
+.your-api___tbody {
+}

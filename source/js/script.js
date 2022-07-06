@@ -1,4 +1,5 @@
 //@@include('app/dynamic_adapt.js');
+//@@include('app/tabs.js');
 
 // Функция для проверки на мобильные устрайства
 var isMobile = {

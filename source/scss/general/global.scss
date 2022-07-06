@@ -129,3 +129,11 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   appearance: textfield;
 }
+
+.tabs__item {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
