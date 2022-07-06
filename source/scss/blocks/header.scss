@@ -12,9 +12,6 @@ html.dark {
             fill: #fff;
         }
     }
-    & .header .profile__btn > span {
-        color: #B1B1B1 !important;
-    }
 }
 body.active {
     & .menu {
@@ -283,7 +280,7 @@ body.active {
             font-weight: 400;
             font-size: clamp(14px, 1.304vw, 15px);
             line-height: 126%;
-            color: var(--white);
+            color: #fff;
             margin-right: 13px;
         }
         & > img {
