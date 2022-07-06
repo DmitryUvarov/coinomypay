@@ -1,5 +1,6 @@
 //@@include('app/dynamic_adapt.js');
 //@@include('app/tabs.js');
+//@@include('app/spoller.js');
 
 // Функция для проверки на мобильные устрайства
 var isMobile = {

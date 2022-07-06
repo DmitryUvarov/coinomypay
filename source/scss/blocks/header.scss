@@ -152,7 +152,8 @@ body.active {
         & svg {
             margin-left: 6px;
             @media (max-width: 991px) {
-                display: none;
+                width: 20px;
+                height: 20px;
             }
         }
         & a {
@@ -179,10 +180,23 @@ body.active {
                 margin-right: 25px;
             }
         }
+        &.hide-pc {
+            @media (min-width: 991px) {
+                display: none;
+                position: absolute;
+                top: -9999px;
+            }
+            @media (max-width: 991px) {
+                order: 7;
+            }
+        }
 
         &._hover {
-            & .menu__sublist {
-                display: block;
+            @media (min-width: 991px) {
+                & .menu__sublist {
+                    display: block;
+                }
+
             }
             & > a {
                 color: #1346CC;
@@ -194,22 +208,20 @@ body.active {
         }
     }
     &__sublist {
-        z-index: 50;
-        position: absolute;
-        display: none;
-        top: calc(100% + 7px);
-        padding: 0 5px 12px 5px ;
-        background: #FFFFFF;
-        border: 1px solid #1346CC;
-        border-radius: 5px;
-        background-color: var(--bgColor);
+        @media (min-width: 991px) {
+            z-index: 50;
+            position: absolute;
+            display: none;
+            top: calc(100% + 7px);
+            padding: 0 5px 12px 5px ;
+            background: #FFFFFF;
+            border: 1px solid #1346CC;
+            border-radius: 5px;
+            background-color: var(--bgColor);
 
+        }
         @media (max-width: 991px) {
-            position: relative;
-            display: block;
-            border: 0;
-            padding: 0 5px 12px 15px ;
-
+            padding: 0 5px 12px 20px ;
         }
     }
     &__subitem {
@@ -223,6 +235,10 @@ body.active {
             font-size: 12.1776px;
             line-height: 125%;
             color: var(--checGray);
+
+            @media (max-width: 991px) {
+                font-size: clamp(20px, 2.174vw, 25px) !important;
+            }
         }
         @media (max-width: 991px) {
             border: 0;
@@ -243,6 +259,9 @@ body.active {
     @media (min-width: 600px) and (max-width: 991px) {
         margin-left: auto;
         margin-right: 30px;
+    }
+    @media (max-width: 991px) {
+        display: none;
     }
     &__btn {
         cursor: pointer;
@@ -371,7 +390,7 @@ body.active {
 }
 
 .burger {
-    @media (max-width: 600px) {
+    @media (max-width: 991px) {
         margin-left: auto;
     }
 }

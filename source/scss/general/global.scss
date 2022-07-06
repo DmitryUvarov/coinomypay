@@ -17,6 +17,10 @@ html.dark {
 
 html.lock {
   overflow: hidden;
+
+  & body {
+    overflow: hidden;
+  }
 }
 html,
 body {
