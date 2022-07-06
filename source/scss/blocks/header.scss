@@ -155,6 +155,7 @@ body.active {
             }
         }
         & a, & span {
+            cursor: pointer;
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
@@ -165,6 +166,10 @@ body.active {
             @media (any-hover: hover) {
                 &:hover {
                     color: #1346CC;
+
+                    & svg {
+                        fill: #1346CC !important;
+                    }
                 }
             }
         }
