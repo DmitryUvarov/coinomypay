@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        @@include('_header.html', {
+        "nav": true
+        })
+
+        <main>
+            @@include('_page-nav.html', {
+            "link": "1"
+            })
+
+            <section class="page-profile">
+                <div class="page-profile__container container">
+                    <div class="page-profile__body">
+                        <div class="profile-body">
+                            <div class="profile-body__name">
+                                <img src="img/profile-big.png" width="102" height="102" alt="">
+                                <span>Magpie</span>
+                            </div>
+                            <div class="profile-body__status status-profile">
+                                <div class="status-profile__item active">
+                                    <div class="status-profile__img"></div>
+                                    <span>Novice</span>
+                                </div>
+                                <div class="status-profile__item">
+                                    <div class="status-profile__img"></div>
+                                    <span>Novice</span>
+                                </div>
+                                <div class="status-profile__item">
+                                    <div class="status-profile__img"></div>
+                                    <span>Novice</span>
+                                </div>
+                            </div>
+                            <div class="profile-body__info">
+                                <ul>
+                                    <li><span>Transfer ID</span><span>1111111111</span></li>
+                                    <li><span>Email address</span><span>test@gmail.com</span></li>
+                                    <li><span>Total Log</span><span>109 Time (Today 1 Times)</span></li>
+                                    <li><span>Last login</span><span>Jul 4, 2022, 5:09 pm</span></li>
+                                    <li><span>Last IP</span><span>21.203.36.196</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="referal">
+                <div class="referal__container container">
+                    <div class="referal__body">
+                        <h2 class="referal__title">Earn 25% Commission</h2>
+                        <div class="referal__text">Refer your friends and earn 30% of their trading fees.</div>
+                        <a href="#" class="referal__link">Referral program</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        @@include('_footer.html')
+    </div>
+
+    @@include('_js.html')
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+.referal {
+
+
+
+    &__container {
+        max-width: 625px;
+    }
+    &__body {
+        padding: 20px 30px;
+        background: var(--themeColor2);
+        border: 1px solid var(--tableBorder);
+        border-radius: 9px;
+        margin-bottom: 30px;
+        @media (max-width: 767px) {
+            padding: 20px 20px;
+        }
+    }
+    &__title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: clamp(20px, 2vw, 23.7075px);
+        line-height: 126%;
+        color: var(--mainColor);
+        margin-bottom: 13px;
+    }
+    &__text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: clamp(14px, 1.304vw, 15.0567px);
+        line-height: 120%;
+        color: #6B6B6B;
+        margin-bottom: 40px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 25px;
+        }
+    }
+    &__link {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: clamp(14px, 1.304vw, 15.0567px);
+        line-height: 120%;
+        color: #1346CC;
+    }
+}

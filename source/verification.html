@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        @@include('_header.html', {
+        "nav": true
+        })
+
+        <main>
+            @@include('_page-nav.html', {
+            "link": "2"
+            })
+
+            <section class="info">
+                <div class="info__container container">
+                    <div class="info__body">
+                        <div class="info__text">
+                            <h1 class="info__title title">Account Verification</h1>
+                            <p class="info__content">To increase user limits, you need to pass the
+                                verification of a Standard user or a Premium user,
+                                you must provide personal information, a photo
+                                of an identity document, and a photo of your face.</p>
+                        </div>
+                        <div class="info__image">
+                            <img src="img/verification.png" width="279" height="269" alt="img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="verification-level">
+                <div class="verification-level__conteiner container">
+                    <div class="verification-level__body">
+                        <div class="verification-level__items">
+
+                            <div class="verification-level__item item-level">
+                                <div class="item-level__top">
+                                    <h5 class="item-level__title">Novice user</h5>
+                                    <div class="item-level__img">
+                                        <svg width="20.37" height="18.12">
+                                            <use xlink:href="img/sprite.svg#diamond"></use>
+                                        </svg>
+                                        <span>Lvl.1</span>
+                                    </div>
+                                </div>
+                                <div class="item-level__info">
+                                    <ul class="item-level__list">
+                                        <li>
+                                            <svg width="13.58px" height="13.58px">
+                                                <use xlink:href="img/sprite.svg#user_01"></use>
+                                            </svg>
+                                            <span>Account registration</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item-level__limits limits-level">
+                                    <div class="limits-level__title">Accaunt limets</div>
+                                    <ul>
+                                        <li>Deposit limit: Unlimited</li>
+                                        <li>Withdrawal limit: Off-limits </li>
+                                        <li>Trading limit: Off-limits </li>
+                                    </ul>
+                                </div>
+                                <button class="item-level__btn btn success">Confirmed</button>
+                            </div>
+
+                            <div class="verification-level__item item-level">
+                                <div class="item-level__top">
+                                    <h5 class="item-level__title">Standard user</h5>
+                                    <div class="item-level__img">
+                                        <svg width="20.37" height="18.12">
+                                            <use xlink:href="img/sprite.svg#diamond"></use>
+                                        </svg>
+                                        <span>Lvl.2</span>
+                                    </div>
+                                </div>
+                                <div class="item-level__info">
+                                    <ul class="item-level__list">
+                                        <li>
+                                            <svg width="13.58px" height="13.58px">
+                                                <use xlink:href="img/sprite.svg#user_01"></use>
+                                            </svg>
+                                            <span>Account registration</span>
+                                        </li>
+                                        <li>
+                                            <svg width="13.58px" height="13.58px">
+                                                <use xlink:href="img/sprite.svg#user_02"></use>
+                                            </svg>
+                                            <span>Personal information</span>
+                                        </li>
+                                        <li>
+                                            <svg width="13.58px" height="13.58px">
+                                                <use xlink:href="img/sprite.svg#user_03"></use>
+                                            </svg>
+                                            <span>Government ID</span>
+                                        </li>
+                                        <li>
+                                            <svg width="13.58px" height="13.58px">
+                                                <use xlink:href="img/sprite.svg#user_04"></use>
+                                            </svg>
+                                            <span>Facial verification</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item-level__limits limits-level">
+                                    <div class="limits-level__title">Accaunt limets</div>
+                                    <ul>
+                                        <li>Deposit limit: Unlimited</li>
+                                        <li>Withdrawal limit: 700$ daily</li>
+                                        <li>Trading limit: 700$ daily</li>
+                                    </ul>
+                                </div>
+                                <button class="item-level__btn btn success">Confirmed</button>
+                            </div>
+
+                            <div class="verification-level__item item-level">
+                                <div class="item-level__top">
+                                    <h5 class="item-level__title">Premium user</h5>
+                                    <div class="item-level__img">
+                                        <svg width="20.37" height="18.12">
+                                            <use xlink:href="img/sprite.svg#diamond"></use>
+                                        </svg>
+                                        <span>Lvl.3</span>
+                                    </div>
+                                </div>
+                                <div class="item-level__info">
+                                    <ul class="item-level__list">
+                                        <li>
+                                            <svg width="13.58px" height="13.58px">
+                                                <use xlink:href="img/sprite.svg#user_01"></use>
+                                            </svg>
+                                            <span>Account registration</span>
+                                        </li>
+                                        <li>
+                                            <svg width="13.58px" height="13.58px">
+                                                <use xlink:href="img/sprite.svg#user_05"></use>
+                                            </svg>
+                                            <span>Making a deposit to activate
+                                                the premium status</span>
+                                        </li>
+                                        <li>
+                                            <svg width="13.58px" height="13.58px">
+                                                <use xlink:href="img/sprite.svg#user_06"></use>
+                                            </svg>
+                                            <span>Review time: 2 days </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item-level__limits limits-level">
+                                    <div class="limits-level__title">Accaunt limets</div>
+                                    <ul>
+                                        <li>Deposit limit: Unlimited</li>
+                                        <li>Withdrawal limit: Unlimited</li>
+                                        <li>Trading limit: Unlimited</li>
+                                    </ul>
+                                </div>
+                                <button class="item-level__btn btn">Confirmed</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        @@include('_footer.html')
+    </div>
+
+    @@include('_js.html')
+</body>
+
+</html>

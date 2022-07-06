@@ -40,6 +40,11 @@ html.dark {
                 height: 2px;
                 background: #1346CC;
             }
+
+            & svg {
+                fill: var(--mainColor);
+                stroke: var(--mainColor);
+            }
             & span {
                 color: var(--mainColor);
             }
@@ -58,6 +63,10 @@ html.dark {
             line-height: 126%;
             color: var(--tableHead);
 
+        }
+        & svg {
+            fill: var(--tableHead);
+            stroke: var(--tableHead);
         }
     }
 
