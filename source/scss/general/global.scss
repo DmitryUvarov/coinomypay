@@ -5,21 +5,16 @@
 }
 
 html.light {
-  & body {
-    background-color: var(--bgColor);
+
+
+  & .page__theme {
+    .blue-mode {
+      display: block;
+    }
   }
-  // & .page__theme {
-  //   background: url(../img/sun.svg) 0 0 / 100% no-repeat;
-  // }
 }
 html.dark {
-  & body {
-    background-color: var(--bgColor);
-  }
 
-  // & .page__theme {
-  //   background: url(../img/moon.svg) 0 0 / 100% no-repeat;
-  // }
 
   & .page__theme {
     & span {
@@ -32,6 +27,9 @@ html.dark {
         transition: all .3s ease;
         background-color: var(--checGray);
       }
+    }
+    .whrite-mode {
+      display: block;
     }
   }
 
@@ -56,6 +54,7 @@ html {
     align-items: center;
     column-gap: 30px;
     & p {
+      display: none;
       margin-left: 6px;
       font-family: 'Inter';
       font-style: normal;
@@ -65,6 +64,7 @@ html {
       color: var(--checGray);
       white-space: nowrap;
     }
+
     & span {
       display: block;
       background-color: var(--grey);
@@ -113,6 +113,9 @@ body {
     box-sizing: border-box;
 }
 
+body {
+  background-color: var(--tagBody) !important;
+}
 
 .container {
   max-width: 1180px;

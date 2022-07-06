@@ -45,8 +45,8 @@ body.active {
     }
 }
 .header {
+    background-color: var(--themeColor);
     position: relative;
-    transition: all .3s ease;
     border-bottom: 1px solid #D9D9D9;
     &.fixed {
         position: fixed;
@@ -127,8 +127,9 @@ body.active {
             &:not(:last-child) {
                 margin-bottom: 25px;
             }
-            & a {
+            & a,  & span{
                 font-size: 30px;
+
             }
         }
     }
@@ -153,7 +154,7 @@ body.active {
                 height: 20px;
             }
         }
-        & a {
+        & a, & span {
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
@@ -195,9 +196,31 @@ body.active {
                 }
 
             }
-            & > a {
+            & > a, & span{
                 color: #1346CC;
             }
+            & span svg {
+                fill: #1346CC !important;
+                transform: rotate(-180deg);
+            }
+        }
+
+        & span._active svg{
+            fill: #1346CC !important;
+            transform: rotate(-180deg);
+        }
+        & > span{
+            display: flex;
+            align-items: center;
+        }
+        & span{
+            transition: all .3s ease;
+        }
+        & span._active span{
+            color: #1346CC;
+        }
+        & svg{
+            transition: all .3s ease;
         }
 
         &:last-child {

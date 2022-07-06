@@ -4,6 +4,7 @@
     padding-top: 45px;
     padding-bottom: 40px;
     &__container {
+        max-width: 1380px;
     }
     &__body {
         display: grid;
@@ -132,7 +133,7 @@
     z-index: 3;
     position: relative;
     background-color: var(--themeColor2);
-    padding: 25px 18px;
+    padding: 20px 18px;
     display: flex;
     column-gap: 15px;
     align-items: center;
@@ -167,17 +168,14 @@
     }
     &__bottom {
         min-height: 300px;
-        padding: 30px;
-        @media (max-width: 767px) {
-            padding: 30px 20px;
-        }
+        padding: 30px 20px 20px;
 
     }
 }
 
 .currency {
     &__item {
-        padding: 17px 18px;
+        padding: 16px 18px;
         border: 1px solid var(--tableBorder);
         border-radius: 9px;
         display: flex;
@@ -272,6 +270,7 @@
 
     @media (max-width: 992px) {
         padding: 0 10px;
+        justify-content: space-between;
     }
     &__image {
         flex-shrink: 0;
@@ -308,5 +307,10 @@
     &__btn {
         border-radius: 9px;
         align-self: flex-end;
+        padding: 9px 26px;
+
+        @media (max-width: 992px) {
+            margin-top: auto;
+        }
     }
 }

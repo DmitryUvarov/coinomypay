@@ -53,7 +53,7 @@ window.onload = function () {
 
     function ducumentActions(e) {
         const targerElement = e.target;
-        if (window.innerWidth > 100) {
+        if (window.innerWidth > 1350) {
             if (targerElement.closest(".menu__item.menu__arrow")) {
                 console.log(targerElement);
                 if (targerElement.closest(".menu__link")) {

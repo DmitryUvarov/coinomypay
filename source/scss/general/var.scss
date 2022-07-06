@@ -3,6 +3,8 @@ $fontSize: 16px;
 
 
 html.dark {
+    --tagBody: #0A1133;
+
     --mainColor: #fff;
     --grey: #6B6B6B;
     --white: #fff;
@@ -14,7 +16,6 @@ html.dark {
     --bgColor: #0A1133;
 
     --checGray: #fff;
-
     --tableHead: #8B97C1;
     --tableBody: #fff;
     --tableBorder: #1A66FF;
@@ -30,6 +31,8 @@ html.dark {
     --logoColor: #fff;
 }
 html.light {
+    --tagBody: #F5F5F5;
+
     --mainColor: #000;
     --grey: #6B6B6B;
     --white: #fff;
