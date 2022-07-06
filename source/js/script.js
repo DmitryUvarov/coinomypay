@@ -94,10 +94,12 @@ window.onload = function () {
 
 
 // buger
+let htmlTag = document.documentElement;
 let burgerBtns = [...document.querySelectorAll(".burger")];
 for (const burgerBtn of burgerBtns) {
     burgerBtn.addEventListener("click", function () {
         body.classList.toggle("active");
+        htmlTag.classList.toggle("lock");
     });
 }
 //  \\\

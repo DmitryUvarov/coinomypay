@@ -27,6 +27,7 @@ html.dark {
         }
     }
     &__logo {
+        z-index: 9;
         grid-area: a;
     }
     &__info {
