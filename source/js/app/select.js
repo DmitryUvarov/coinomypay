@@ -56,9 +56,12 @@ function select_item(select) {
     const select_items = select_parent.querySelector('.select__item');
     const select_options = select.querySelectorAll('option');
     const select_selected_option = select.querySelector('option:checked');
+    const select_selected_option_image = select_selected_option.getAttribute('data-image');
     const select_selected_text = select_selected_option.text;
     const select_type = select.getAttribute('data-type');
 
+
+    const select_selected_image = select.querySelector('option:checked img');
     if (select_items) {
         select_items.remove();
     }
@@ -66,6 +69,8 @@ function select_item(select) {
     let select_type_content = '';
     if (select_type == 'input') {
         select_type_content = '<div class="select__value icon-select-arrow"><input autocomplete="off" type="text" name="form[]" value="' + select_selected_text + '" data-error="Ошибка" data-value="' + select_selected_text + '" class="select__input"></div>';
+    } else if (select_type == 'img') {
+        select_type_content = '<div class="select__value icon-select-arrow"><span><img src="' + select_selected_option_image + '"></span></div>';
     } else {
         select_type_content = '<div class="select__value icon-select-arrow"><span>' + select_selected_text + '</span></div>';
     }
@@ -166,7 +171,9 @@ function select_get_options(select_options) {
             const select_option_value = select_option.value;
             if (select_option_value != '') {
                 const select_option_text = select_option.innerHTML;
-                select_options_content = select_options_content + '<div data-value="' + select_option_value + '" class="select__option">' + select_option_text + '</div>';
+                const select_option_option_image = select_option.getAttribute('data-image');
+
+                select_options_content = select_options_content + '<div data-value="' + select_option_value + '" class="select__option"><img src="' + select_option_option_image + '"></div>';
             }
         }
         return select_options_content;
@@ -196,72 +203,3 @@ function selects_update_all() {
         }
     }
 }
-// \\\
-
-//SlideToggle
-let _slideUp = (target, duration = 500) => {
-    if (!target.classList.contains('_slide')) {
-        target.classList.add('_slide');
-        target.style.transitionProperty = 'height, margin, padding';
-        target.style.transitionDuration = duration + 'ms';
-        target.style.height = target.offsetHeight + 'px';
-        target.offsetHeight;
-        target.style.overflow = 'hidden';
-        target.style.height = 0;
-        target.style.paddingTop = 0;
-        target.style.paddingBottom = 0;
-        target.style.marginTop = 0;
-        target.style.marginBottom = 0;
-        window.setTimeout(() => {
-            target.hidden = true;
-            target.style.removeProperty('height');
-            target.style.removeProperty('padding-top');
-            target.style.removeProperty('padding-bottom');
-            target.style.removeProperty('margin-top');
-            target.style.removeProperty('margin-bottom');
-            target.style.removeProperty('overflow');
-            target.style.removeProperty('transition-duration');
-            target.style.removeProperty('transition-property');
-            target.classList.remove('_slide');
-        }, duration);
-    }
-}
-let _slideDown = (target, duration = 500) => {
-    if (!target.classList.contains('_slide')) {
-        target.classList.add('_slide');
-        if (target.hidden) {
-            target.hidden = false;
-        }
-        let height = target.offsetHeight;
-        target.style.overflow = 'hidden';
-        target.style.height = 0;
-        target.style.paddingTop = 0;
-        target.style.paddingBottom = 0;
-        target.style.marginTop = 0;
-        target.style.marginBottom = 0;
-        target.offsetHeight;
-        target.style.transitionProperty = "height, margin, padding";
-        target.style.transitionDuration = duration + 'ms';
-        target.style.height = height + 'px';
-        target.style.removeProperty('padding-top');
-        target.style.removeProperty('padding-bottom');
-        target.style.removeProperty('margin-top');
-        target.style.removeProperty('margin-bottom');
-        window.setTimeout(() => {
-            target.style.removeProperty('height');
-            target.style.removeProperty('overflow');
-            target.style.removeProperty('transition-duration');
-            target.style.removeProperty('transition-property');
-            target.classList.remove('_slide');
-        }, duration);
-    }
-}
-let _slideToggle = (target, duration = 500) => {
-    if (target.hidden) {
-        return _slideDown(target, duration);
-    } else {
-        return _slideUp(target, duration);
-    }
-}
-
-// \\\

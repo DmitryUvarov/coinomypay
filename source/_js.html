@@ -1,2 +1,751 @@
 <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
 <script src="js/script.min.js"></script>
+
+<script>
+
+
+
+    let selectSpanOne = document.getElementById('select__span-one')
+    let selectSpanTwo = document.getElementById('select__span-two')
+    let selectSpanThree = document.getElementById('select__span-Three')
+    let selectSpanFour = document.getElementById('select__span-Four')
+    let select = document.querySelector('.selects')
+    let selectColOne = document.querySelector('.selectColOne')
+    let selectColTwo = document.querySelector('.selectColTwo')
+    let selectColThree = document.querySelector('.selectColThree')
+    let selectColFour = document.querySelector('.selectColFour')
+    let selectItem = document.querySelector('.select__itemm')
+    let btc = document.querySelector('.btc')
+    let ltc = document.querySelector('.ltc')
+    let eth = document.querySelector('.eth')
+
+    selectSpanOne.classList.add('btc')
+    selectSpanTwo.classList.add('ltc')
+    selectSpanThree.classList.add('eth')
+    selectSpanFour.classList.add('btc')
+
+
+    selectSpanOne.addEventListener('click', () => {
+        // selectRemove()
+        selectColOne.classList.toggle('select__activ')
+    });
+
+    selectSpanTwo.addEventListener('click', () => {
+        // selectRemove()
+        selectColTwo.classList.toggle('select__activ')
+    });
+
+    selectSpanThree.addEventListener('click', () => {
+        // selectRemove()
+        selectColThree.classList.toggle('select__activ')
+    });
+
+    selectSpanFour.addEventListener('click', () => {
+        // selectRemove()
+        selectColFour.classList.toggle('select__activ')
+    });
+
+
+    document.getElementById('select__list-one').addEventListener('click', (event) => {
+        let selectSpan = document.getElementById('select__span-one')
+        renderSelect(selectSpan, event)
+    });
+
+
+
+    document.getElementById('select__list-two').addEventListener('click', (event) => {
+        let selectSpan = document.getElementById('select__span-two')
+        renderSelect(selectSpan, event)
+    });
+
+    document.getElementById('select__list-Three').addEventListener('click', (event) => {
+        let selectSpan = document.getElementById('select__span-Three')
+        renderSelect(selectSpan, event)
+    });
+
+
+    document.getElementById('select__list-Four').addEventListener('click', (event) => {
+        let selectSpan = document.getElementById('select__span-Four')
+        renderSelect(selectSpan, event)
+    });
+
+
+    function renderSelect(selectSpan, event) {
+        let itemChild = event.currentTarget.childNodes;
+        let itemCopy = event.target;
+        let ltcName = itemCopy.classList[1];
+        let itemText = itemCopy.textContent;
+        selectSpan.innerHTML = itemText;
+        selectListRemove(selectSpan)
+        selectSpan.classList.add(`${ltcName}`)
+        selectColorRemove(itemChild)
+        itemCopy.classList.add('select__coin-activ')
+        selectRemove()
+    }
+
+    function selectListRemove(selectSpan) {
+        selectSpan.classList.remove('btc')
+        selectSpan.classList.remove('ltc')
+        selectSpan.classList.remove('eth')
+    }
+
+    function selectColorRemove(itemChild) {
+        for (let node of itemChild) {
+            let n = node.className;
+
+            if (n === undefined) {
+
+            }
+            else if (node.classList[2] === 'select__coin-activ') {
+                let itemClass = node;
+                itemClass.classList.remove('select__coin-activ')
+            } else {
+
+            }
+        }
+
+    }
+
+    function selectRemove() {
+        selectColOne.classList.remove('select__activ')
+        selectColTwo.classList.remove('select__activ')
+        selectColThree.classList.remove('select__activ')
+        selectColFour.classList.remove('select__activ')
+    }
+
+
+
+
+    var default_1 = 'btc';
+    var default_2 = 'ltc';
+    var default_3 = 'eth';
+    var default_4 = 'btc';
+
+    function select_1(crypto) {
+        default_1 = crypto;
+
+        var str_crypto = crypto.toUpperCase();
+        $("#amount_crypto_1").html(str_crypto);
+        $("#profit_crypto_1").html(str_crypto);
+        $("#total_crypto_1").html(str_crypto);
+
+        $("#input_amount_1").val('0.0000');
+        $("#profit_amount_1").html('0.0000');
+        $("#profit_usd_1").html('0.00');
+        $("#total_amount_1").html('0.0000');
+        $("#total_usd_1").html('0.00');
+    }
+
+    function select_2(crypto) {
+        default_2 = crypto;
+
+        var str_crypto = crypto.toUpperCase();
+        $("#amount_crypto_2").html(str_crypto);
+        $("#profit_crypto_2").html(str_crypto);
+        $("#total_crypto_2").html(str_crypto);
+
+        $("#input_amount_2").val('0.0000');
+        $("#profit_amount_2").html('0.0000');
+        $("#profit_usd_2").html('0.00');
+        $("#total_amount_2").html('0.0000');
+        $("#total_usd_2").html('0.00');
+    }
+
+    function select_3(crypto) {
+        default_3 = crypto;
+
+        var str_crypto = crypto.toUpperCase();
+        $("#amount_crypto_3").html(str_crypto);
+        $("#profit_crypto_3").html(str_crypto);
+        $("#total_crypto_3").html(str_crypto);
+
+        $("#input_amount_3").val('0.0000');
+        $("#profit_amount_3").html('0.0000');
+        $("#profit_usd_3").html('0.00');
+        $("#total_amount_3").html('0.0000');
+        $("#total_usd_3").html('0.00');
+    }
+
+    function select_4(crypto) {
+        default_4 = crypto;
+
+        var str_crypto = crypto.toUpperCase();
+        $("#amount_crypto_4").html(str_crypto);
+        $("#profit_crypto_4").html(str_crypto);
+        $("#total_crypto_4").html(str_crypto);
+
+        $("#input_amount_4").val('0.0000');
+        $("#profit_amount_4").html('0.0000');
+        $("#profit_usd_4").html('0.00');
+        $("#total_amount_4").html('0.0000');
+        $("#total_usd_4").html('0.00');
+    }
+
+    function max_1() {
+        var my_balance = $("#" + default_1 + "_balance").val();
+        var profit_amount = parseFloat(my_balance) / 100 * 10.1;
+        profit_amount = parseFloat(profit_amount).toFixed(6);
+        var profit_amount_usd = parseFloat($("#" + default_1 + "_course").val()) * profit_amount;
+        profit_amount_usd = profit_amount_usd.toFixed(2);
+
+        var total_amount = parseFloat(my_balance) + parseFloat(profit_amount);
+        total_amount = parseFloat(total_amount).toFixed(6);
+        var total_amount_usd = parseFloat($("#" + default_1 + "_course").val()) * total_amount;
+        total_amount_usd = total_amount_usd.toFixed(2);
+
+        $("#input_amount_1").val(my_balance);
+        $("#profit_amount_1").html(profit_amount);
+        $("#profit_usd_1").html(profit_amount_usd);
+        $("#total_amount_1").html(total_amount);
+        $("#total_usd_1").html(total_amount_usd);
+
+
+    }
+
+    function max_2() {
+        var my_balance = $("#" + default_2 + "_balance").val();
+        var profit_amount = parseFloat(my_balance) / 100 * 24.9;
+        profit_amount = parseFloat(profit_amount).toFixed(6);
+        var profit_amount_usd = parseFloat($("#" + default_2 + "_course").val()) * profit_amount;
+        profit_amount_usd = profit_amount_usd.toFixed(2);
+
+        var total_amount = parseFloat(my_balance) + parseFloat(profit_amount);
+        total_amount = parseFloat(total_amount).toFixed(6);
+        var total_amount_usd = parseFloat($("#" + default_2 + "_course").val()) * total_amount;
+        total_amount_usd = total_amount_usd.toFixed(2);
+
+        $("#input_amount_2").val(my_balance);
+        $("#profit_amount_2").html(profit_amount);
+        $("#profit_usd_2").html(profit_amount_usd);
+        $("#total_amount_2").html(total_amount);
+        $("#total_usd_2").html(total_amount_usd);
+
+
+    }
+
+    function max_3() {
+        var my_balance = $("#" + default_3 + "_balance").val();
+        var profit_amount = parseFloat(my_balance) / 100 * 70;
+        profit_amount = parseFloat(profit_amount).toFixed(6);
+        var profit_amount_usd = parseFloat($("#" + default_3 + "_course").val()) * profit_amount;
+        profit_amount_usd = profit_amount_usd.toFixed(2);
+
+        var total_amount = parseFloat(my_balance) + parseFloat(profit_amount);
+        total_amount = parseFloat(total_amount).toFixed(6);
+        var total_amount_usd = parseFloat($("#" + default_3 + "_course").val()) * total_amount;
+        total_amount_usd = total_amount_usd.toFixed(2);
+
+        $("#input_amount_3").val(my_balance);
+        $("#profit_amount_3").html(profit_amount);
+        $("#profit_usd_3").html(profit_amount_usd);
+        $("#total_amount_3").html(total_amount);
+        $("#total_usd_3").html(total_amount_usd);
+
+
+    }
+
+    function max_4() {
+        var my_balance = $("#" + default_4 + "_balance").val();
+        var profit_amount = parseFloat(my_balance) / 100 * 250;
+        profit_amount = parseFloat(profit_amount).toFixed(6);
+        var profit_amount_usd = parseFloat($("#" + default_4 + "_course").val()) * profit_amount;
+        profit_amount_usd = profit_amount_usd.toFixed(2);
+
+        var total_amount = parseFloat(my_balance) + parseFloat(profit_amount);
+        total_amount = parseFloat(total_amount).toFixed(6);
+        var total_amount_usd = parseFloat($("#" + default_4 + "_course").val()) * total_amount;
+        total_amount_usd = total_amount_usd.toFixed(2);
+
+        $("#input_amount_4").val(my_balance);
+        $("#profit_amount_4").html(profit_amount);
+        $("#profit_usd_4").html(profit_amount_usd);
+        $("#total_amount_4").html(total_amount);
+        $("#total_usd_4").html(total_amount_usd);
+
+
+    }
+
+
+    $('#input_amount_1').keyup(function (e) {
+
+        var my_balance = $("#" + default_1 + "_balance").val();
+
+        var input_amount = $("#input_amount_1").val();
+
+        if ($("#input_amount_1").val() == '') {
+            input_amount = 0;
+        }
+
+
+        var profit_amount = parseFloat(input_amount) / 100 * 10.1;
+        profit_amount = parseFloat(profit_amount).toFixed(6);
+        var profit_amount_usd = parseFloat($("#" + default_1 + "_course").val()) * profit_amount;
+        profit_amount_usd = profit_amount_usd.toFixed(2);
+
+        var total_amount = parseFloat(input_amount) + parseFloat(profit_amount);
+        total_amount = parseFloat(total_amount).toFixed(6);
+        var total_amount_usd = parseFloat($("#" + default_1 + "_course").val()) * total_amount;
+        total_amount_usd = total_amount_usd.toFixed(2);
+
+
+
+        if (parseFloat(my_balance) < parseFloat(input_amount)) {
+            noti("You do not have enough funds for this amount", "error");
+            $("#profit_amount_1").html('0.0000');
+            $("#profit_usd_1").html('0.00');
+            $("#total_amount_1").html('0.0000');
+            $("#total_usd_1").html('0.00');
+        } else {
+            $("#profit_amount_1").html(profit_amount);
+            $("#profit_usd_1").html(profit_amount_usd);
+            $("#total_amount_1").html(total_amount);
+            $("#total_usd_1").html(total_amount_usd);
+        }
+
+
+
+    });
+
+    $('#input_amount_2').keyup(function (e) {
+
+        var my_balance = $("#" + default_2 + "_balance").val();
+
+        var input_amount = $("#input_amount_2").val();
+
+        if ($("#input_amount_2").val() == '') {
+            input_amount = 0;
+        }
+
+
+        var profit_amount = parseFloat(input_amount) / 100 * 24.9;
+        profit_amount = parseFloat(profit_amount).toFixed(6);
+        var profit_amount_usd = parseFloat($("#" + default_2 + "_course").val()) * profit_amount;
+        profit_amount_usd = profit_amount_usd.toFixed(2);
+
+        var total_amount = parseFloat(input_amount) + parseFloat(profit_amount);
+        total_amount = parseFloat(total_amount).toFixed(6);
+        var total_amount_usd = parseFloat($("#" + default_2 + "_course").val()) * total_amount;
+        total_amount_usd = total_amount_usd.toFixed(2);
+
+
+
+        if (parseFloat(my_balance) < parseFloat(input_amount)) {
+            noti("You do not have enough funds for this amount", "error");
+            $("#profit_amount_2").html('0.0000');
+            $("#profit_usd_2").html('0.00');
+            $("#total_amount_2").html('0.0000');
+            $("#total_usd_2").html('0.00');
+        } else {
+            $("#profit_amount_2").html(profit_amount);
+            $("#profit_usd_2").html(profit_amount_usd);
+            $("#total_amount_2").html(total_amount);
+            $("#total_usd_2").html(total_amount_usd);
+        }
+
+
+
+    });
+
+    $('#input_amount_3').keyup(function (e) {
+
+        var my_balance = $("#" + default_3 + "_balance").val();
+
+        var input_amount = $("#input_amount_3").val();
+
+        if ($("#input_amount_3").val() == '') {
+            input_amount = 0;
+        }
+
+
+        var profit_amount = parseFloat(input_amount) / 100 * 70;
+        profit_amount = parseFloat(profit_amount).toFixed(6);
+        var profit_amount_usd = parseFloat($("#" + default_3 + "_course").val()) * profit_amount;
+        profit_amount_usd = profit_amount_usd.toFixed(2);
+
+        var total_amount = parseFloat(input_amount) + parseFloat(profit_amount);
+        total_amount = parseFloat(total_amount).toFixed(6);
+        var total_amount_usd = parseFloat($("#" + default_3 + "_course").val()) * total_amount;
+        total_amount_usd = total_amount_usd.toFixed(2);
+
+
+
+        if (parseFloat(my_balance) < parseFloat(input_amount)) {
+            noti("You do not have enough funds for this amount", "error");
+            $("#profit_amount_3").html('0.0000');
+            $("#profit_usd_3").html('0.00');
+            $("#total_amount_3").html('0.0000');
+            $("#total_usd_3").html('0.00');
+        } else {
+            $("#profit_amount_3").html(profit_amount);
+            $("#profit_usd_3").html(profit_amount_usd);
+            $("#total_amount_3").html(total_amount);
+            $("#total_usd_3").html(total_amount_usd);
+        }
+
+
+
+    });
+
+    $('#input_amount_4').keyup(function (e) {
+
+        var my_balance = $("#" + default_4 + "_balance").val();
+
+        var input_amount = $("#input_amount_4").val();
+
+        if ($("#input_amount_4").val() == '') {
+            input_amount = 0;
+        }
+
+
+        var profit_amount = parseFloat(input_amount) / 100 * 250;
+        profit_amount = parseFloat(profit_amount).toFixed(6);
+        var profit_amount_usd = parseFloat($("#" + default_4 + "_course").val()) * profit_amount;
+        profit_amount_usd = profit_amount_usd.toFixed(2);
+
+        var total_amount = parseFloat(input_amount) + parseFloat(profit_amount);
+        total_amount = parseFloat(total_amount).toFixed(6);
+        var total_amount_usd = parseFloat($("#" + default_4 + "_course").val()) * total_amount;
+        total_amount_usd = total_amount_usd.toFixed(2);
+
+
+
+        if (parseFloat(my_balance) < parseFloat(input_amount)) {
+            noti("You do not have enough funds for this amount", "error");
+            $("#profit_amount_4").html('0.0000');
+            $("#profit_usd_4").html('0.00');
+            $("#total_amount_4").html('0.0000');
+            $("#total_usd_4").html('0.00');
+        } else {
+            $("#profit_amount_4").html(profit_amount);
+            $("#profit_usd_4").html(profit_amount_usd);
+            $("#total_amount_4").html(total_amount);
+            $("#total_usd_4").html(total_amount_usd);
+        }
+
+
+
+    });
+
+
+    $("#stake_btn_1").on("click", function () {
+        var select_coin = default_1;
+        var invest_amount = $("#input_amount_1").val();
+        var my_balance = $("#" + select_coin + "_balance").val();
+
+        if (parseFloat(my_balance) < parseFloat(invest_amount)) {
+            noti("You do not have enough funds for this amount", "error");
+        } else if (invest_amount == '' || parseFloat(invest_amount) == 0) {
+            noti("Please, enter invest amount", "info");
+        } else {
+            var profit_amount = parseFloat(invest_amount) / 100 * 10.1;
+            profit_amount = parseFloat(profit_amount).toFixed(6);
+            var total_amount = parseFloat(invest_amount) + parseFloat(profit_amount);
+            total_amount = parseFloat(total_amount).toFixed(6);
+
+            $.ajax({
+                url: "../ajax/ajax",
+                type: "POST",
+                data: {
+                    action: "CREATE_INVEST_PLAN",
+                    invest_plan: "1",
+                    invest_coin: select_coin,
+                    invest_amount: invest_amount,
+                    invest_profit: profit_amount,
+                    invest_total: total_amount
+                },
+                success: function (response) {
+                    console.log(response);
+                    if (response == '1') {
+                        noti("Invest plan successfully created", "success");
+                        $("#stake_btn_1").css("pointer-events", "none");
+                        $("#stake_btn_1").css("opacity", "0.2");
+                        $("#stake_block_1").css("opacity", "0.2");
+                        $("#stake_block_1").css("pointer-events", "none");
+                        $("#stake_block_1").css("display", "block");
+                        $("#stake_btn_1").html("Invested");
+
+                        var new_balance = parseFloat(my_balance) - parseFloat(invest_amount);
+                        $("#" + select_coin + "_balance").val(new_balance);
+                    } else if (response == '2') {
+                        noti("Not enough balance.", "error");
+                    } else if (response == '4') {
+                        noti("An unknown error has occurred, please try again later", "error");
+                    } else {
+                        noti("An unknown error has occurred, please try again later", "error");
+                    }
+
+                }
+            })
+        }
+    });
+
+    $("#stake_btn_2").on("click", function () {
+        var select_coin = default_2;
+        var invest_amount = $("#input_amount_2").val();
+        var my_balance = $("#" + select_coin + "_balance").val();
+
+        if (parseFloat(my_balance) < parseFloat(invest_amount)) {
+            noti("You do not have enough funds for this amount", "error");
+        } else if (invest_amount == '' || parseFloat(invest_amount) == 0) {
+            noti("Please, enter invest amount", "info");
+        } else {
+            var profit_amount = parseFloat(invest_amount) / 100 * 24.9;
+            profit_amount = parseFloat(profit_amount).toFixed(6);
+            var total_amount = parseFloat(invest_amount) + parseFloat(profit_amount);
+            total_amount = parseFloat(total_amount).toFixed(6);
+
+            $.ajax({
+                url: "../ajax/ajax",
+                type: "POST",
+                data: {
+                    action: "CREATE_INVEST_PLAN",
+                    invest_plan: "2",
+                    invest_coin: select_coin,
+                    invest_amount: invest_amount,
+                    invest_profit: profit_amount,
+                    invest_total: total_amount
+                },
+                success: function (response) {
+                    console.log(response);
+                    if (response == '1') {
+                        noti("Invest plan successfully created", "success");
+                        $("#stake_btn_2").css("pointer-events", "none");
+                        $("#stake_btn_2").css("opacity", "0.2");
+                        $("#stake_block_2").css("opacity", "0.2");
+                        $("#stake_block_2").css("pointer-events", "none");
+                        $("#stake_block_2").css("display", "block");
+                        $("#stake_btn_2").html("Invested");
+
+                        var new_balance = parseFloat(my_balance) - parseFloat(invest_amount);
+                        $("#" + select_coin + "_balance").val(new_balance);
+                    } else if (response == '2') {
+                        noti("Not enough balance.", "error");
+                    } else if (response == '4') {
+                        noti("An unknown error has occurred, please try again later", "error");
+                    } else {
+                        noti("An unknown error has occurred, please try again later", "error");
+                    }
+
+                }
+            })
+        }
+    });
+
+    $("#stake_btn_3").on("click", function () {
+        var select_coin = default_3;
+        var invest_amount = $("#input_amount_3").val();
+        var my_balance = $("#" + select_coin + "_balance").val();
+
+        if (parseFloat(my_balance) < parseFloat(invest_amount)) {
+            noti("You do not have enough funds for this amount", "error");
+        } else if (invest_amount == '' || parseFloat(invest_amount) == 0) {
+            noti("Please, enter invest amount", "info");
+        } else {
+            var profit_amount = parseFloat(invest_amount) / 100 * 70;
+            profit_amount = parseFloat(profit_amount).toFixed(6);
+            var total_amount = parseFloat(invest_amount) + parseFloat(profit_amount);
+            total_amount = parseFloat(total_amount).toFixed(6);
+
+            $.ajax({
+                url: "../ajax/ajax",
+                type: "POST",
+                data: {
+                    action: "CREATE_INVEST_PLAN",
+                    invest_plan: "3",
+                    invest_coin: select_coin,
+                    invest_amount: invest_amount,
+                    invest_profit: profit_amount,
+                    invest_total: total_amount
+                },
+                success: function (response) {
+                    console.log(response);
+                    if (response == '1') {
+                        noti("Invest plan successfully created", "success");
+                        $("#stake_btn_3").css("pointer-events", "none");
+                        $("#stake_btn_3").css("opacity", "0.2");
+                        $("#stake_block_3").css("opacity", "0.2");
+                        $("#stake_block_3").css("pointer-events", "none");
+                        $("#stake_block_3").css("display", "block");
+                        $("#stake_btn_3").html("Invested");
+
+                        var new_balance = parseFloat(my_balance) - parseFloat(invest_amount);
+                        $("#" + select_coin + "_balance").val(new_balance);
+                    } else if (response == '2') {
+                        noti("Not enough balance.", "error");
+                    } else if (response == '4') {
+                        noti("An unknown error has occurred, please try again later", "error");
+                    } else {
+                        noti("An unknown error has occurred, please try again later", "error");
+                    }
+
+                }
+            })
+        }
+    });
+
+    $("#stake_btn_4").on("click", function () {
+        var select_coin = default_4;
+        var invest_amount = $("#input_amount_4").val();
+        var my_balance = $("#" + select_coin + "_balance").val();
+
+        if (parseFloat(my_balance) < parseFloat(invest_amount)) {
+            noti("You do not have enough funds for this amount", "error");
+        } else if (invest_amount == '' || parseFloat(invest_amount) == 0) {
+            noti("Please, enter invest amount", "info");
+        } else {
+            var profit_amount = parseFloat(invest_amount) / 100 * 250;
+            profit_amount = parseFloat(profit_amount).toFixed(6);
+            var total_amount = parseFloat(invest_amount) + parseFloat(profit_amount);
+            total_amount = parseFloat(total_amount).toFixed(6);
+
+            $.ajax({
+                url: "../ajax/ajax",
+                type: "POST",
+                data: {
+                    action: "CREATE_INVEST_PLAN",
+                    invest_plan: "4",
+                    invest_coin: select_coin,
+                    invest_amount: invest_amount,
+                    invest_profit: profit_amount,
+                    invest_total: total_amount
+                },
+                success: function (response) {
+                    console.log(response);
+                    if (response == '1') {
+                        noti("Invest plan successfully created", "success");
+                        $("#stake_btn_4").css("pointer-events", "none");
+                        $("#stake_btn_4").css("opacity", "0.2");
+                        $("#stake_block_4").css("opacity", "0.2");
+                        $("#stake_block_4").css("pointer-events", "none");
+                        $("#stake_block_4").css("display", "block");
+                        $("#stake_btn_4").html("Invested");
+
+                        var new_balance = parseFloat(my_balance) - parseFloat(invest_amount);
+                        $("#" + select_coin + "_balance").val(new_balance);
+                    } else if (response == '2') {
+                        noti("Not enough balance.", "error");
+                    } else if (response == '4') {
+                        noti("An unknown error has occurred, please try again later", "error");
+                    } else {
+                        noti("An unknown error has occurred, please try again later", "error");
+                    }
+
+                }
+            })
+        }
+    });
+
+    $("#return_btn_1").on("click", function () {
+        var amount_1 = $("#total_amount_1").html();
+        var crypto_1 = $("#total_crypto_1").html();
+
+        $.ajax({
+            url: "../ajax/ajax",
+            type: "POST",
+            data: {
+                action: "REFUND_INVEST_PLAN",
+                invest_plan: "1",
+                invest_amount: amount_1,
+                invest_coin: crypto_1
+            },
+            success: function (response) {
+                if (response == "1") {
+                    $("#invest_return_modal").css("display", "flex");
+                    $("#invest_modal_span_amount").html(amount_1 + "&ensp;" + crypto_1);
+                    noti("Refund completed successfully", "success");
+                } else if (response == "2") {
+                    noti("This plan has already been closed", "error");
+                } else {
+                    noti("An unknown error has occurred, please try again later", "error");
+                }
+            }
+        });
+
+    })
+
+    $("#return_btn_2").on("click", function () {
+        var amount_2 = $("#total_amount_2").html();
+        var crypto_2 = $("#total_crypto_2").html();
+
+        $.ajax({
+            url: "../ajax/ajax",
+            type: "POST",
+            data: {
+                action: "REFUND_INVEST_PLAN",
+                invest_plan: "2",
+                invest_amount: amount_2,
+                invest_coin: crypto_2
+            },
+            success: function (response) {
+                if (response == "1") {
+                    $("#invest_return_modal").css("display", "flex");
+                    $("#invest_modal_span_amount").html(amount_2 + "&ensp;" + crypto_2);
+                    noti("Refund completed successfully", "success");
+                } else if (response == "2") {
+                    noti("This plan has already been closed", "error");
+                } else {
+                    noti("An unknown error has occurred, please try again later", "error");
+                }
+            }
+        });
+
+    })
+
+    $("#return_btn_3").on("click", function () {
+        var amount_3 = $("#total_amount_3").html();
+        var crypto_3 = $("#total_crypto_3").html();
+
+        $.ajax({
+            url: "../ajax/ajax",
+            type: "POST",
+            data: {
+                action: "REFUND_INVEST_PLAN",
+                invest_plan: "3",
+                invest_amount: amount_3,
+                invest_coin: crypto_3
+            },
+            success: function (response) {
+                if (response == "1") {
+                    $("#invest_return_modal").css("display", "flex");
+                    $("#invest_modal_span_amount").html(amount_3 + "&ensp;" + crypto_3);
+                    noti("Refund completed successfully", "success");
+                } else if (response == "2") {
+                    noti("This plan has already been closed", "error");
+                } else {
+                    noti("An unknown error has occurred, please try again later", "error");
+                }
+            }
+        });
+
+    })
+
+    $("#return_btn_4").on("click", function () {
+        var amount_4 = $("#total_amount_4").html();
+        var crypto_4 = $("#total_crypto_4").html();
+
+        $.ajax({
+            url: "../ajax/ajax",
+            type: "POST",
+            data: {
+                action: "REFUND_INVEST_PLAN",
+                invest_plan: "4",
+                invest_amount: amount_4,
+                invest_coin: crypto_4
+            },
+            success: function (response) {
+                if (response == "1") {
+                    $("#invest_return_modal").css("display", "flex");
+                    $("#invest_modal_span_amount").html(amount_4 + "&ensp;" + crypto_4);
+                    noti("Refund completed successfully", "success");
+                } else if (response == "2") {
+                    noti("This plan has already been closed", "error");
+                } else {
+                    noti("An unknown error has occurred, please try again later", "error");
+                }
+            }
+        });
+
+    })
+
+
+</script>

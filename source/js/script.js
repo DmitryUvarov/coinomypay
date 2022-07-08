@@ -1,6 +1,7 @@
 //@@include('app/dynamic_adapt.js');
 //@@include('app/tabs.js');
 //@@include('app/spoller.js');
+//@@include('app/select.js');
 
 // Функция для проверки на мобильные устрайства
 var isMobile = {
@@ -111,7 +112,6 @@ window.addEventListener("load", windowLoad);
 
 function windowLoad() {
 
-    console.log('ree')
     const htmlBlock = document.documentElement;
 
     const saveUserTheme = localStorage.getItem('user-theme');
@@ -120,7 +120,6 @@ function windowLoad() {
     let userTheme;
     if (window.matchMedia) {
         userTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        console.log(userTheme)
     }
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
         !saveUserTheme ? changeTheme() : null;
@@ -170,4 +169,10 @@ function windowLoad() {
         saveTheme ? localStorage.setItem('user-theme', newTheme) : null;
     }
 
-}
+};
+
+
+
+//@@include('jquery-3.4.1.min.js');
+
+

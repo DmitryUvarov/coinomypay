@@ -1,0 +1,26 @@
+.withdrawals-block {
+
+
+
+    & .form-tabs__commission {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+
+
+        color: var(--mainColor);
+
+        @media (max-width: 767px) {
+            margin-top: 13px;
+        }
+    }
+    & .form-tabs__fieldset {
+
+        @media (min-width: 767px) {
+            align-items: center;
+        }
+    }
+}

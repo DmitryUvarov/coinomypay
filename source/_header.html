@@ -56,6 +56,12 @@
                     </li>
                 </ul>
             </nav>
+
+            <select name="example" data-type="img">
+                <option value="1" data-image="img/btc.png"></option>
+                <option value="2" data-image="img/ltc.png"></option>
+            </select>
+
             <div id="profile" data-href="/profile.html" class="header__profile profile" data-da=".header__menu,600,2">
                 <div class="profile__btn">
                     <span>Magpie</span>
@@ -79,6 +85,11 @@
                             <li class="profile__link"><a href="#">Security</a></li>
                             <li class="profile__link"><a href="#">API Tokens</a></li>
                         </ul>
+                        <button data-da=".header__menu,991,0" type="button" class="page__theme">
+                            <p class="whrite-mode">White mode</p>
+                            <p class="blue-mode">Blue mode</p>
+                            <span></span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -87,11 +98,7 @@
                 <span></span>
                 <span></span>
             </button>
-            <button data-da=".header__menu,600,0" type="button" class="page__theme">
-                <p class="whrite-mode">White mode</p>
-                <p class="blue-mode">Blue mode</p>
-                <span></span>
-            </button>
+            <button class="page_reset" style="display: none;"></button>
         </div>
     </div>
 </header>

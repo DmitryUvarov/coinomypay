@@ -1,0 +1,59 @@
+.message {
+    padding-top: 45px;
+    margin-bottom: 9px;
+    & ~ section {
+        padding-top: 0;
+    }
+    &__container {
+    }
+    &__body {
+        border-radius: 9px;
+        overflow: hidden;
+        background-color: var(--messageColor);
+        border-color: #bee5eb;
+        position: relative;
+        padding: 12px 20px;
+    }
+    &__title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        color: var(--messageColor2);
+        font-size: 18px;
+        line-height: 150%;
+        margin-bottom: 7px;
+
+        & strong {
+            font-weight: 700;
+        }
+    }
+    &__text {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        color: var(--mainColor);
+        font-size: 13px;
+        line-height: 130%;
+
+    }
+
+    & .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 12px 20px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        color: var(--messageColor2);
+        font-size: 18px;
+        line-height: 150%;
+        transition: color .3s ease;
+        @media (any-hover: hover) {
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+
+}

@@ -3,41 +3,49 @@
 	// .select__item
 	&__item {
 		position: relative;
+
 	}
 	// .select__title
 	&__title {
 		color: #000;
-		border: 1px solid #d9d9d9;
 		background-color: #fff;
 		cursor: pointer;
 		border-radius: 4px;
-		@media (max-width: 991px) {
-			font-size: 18px;
-		}
+		// @media (max-width: 991px) {
+		// 	font-size: 18px;
+		// }
 	}
 	// .select__value
 	&__value {
 		display: flex;
 		font-size: 14px;
-		height: 30px;
-		padding: 0px 15px;
 		align-items: center;
-		justify-content: space-between;
-		flex-direction: row-reverse;
+
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		color: #506690;
 		span {
-			height: 1em;
 			overflow: hidden;
 			display: -webkit-box;
 			-webkit-line-clamp: 1;
 			-webkit-box-orient: vertical;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 65px;
+			height: 65px;
+			border-radius: 50%;
+			border: 2px solid #e0e3eb;
 		}
 		&:before {
-			content: "";
-			display: inline-block;
-			transition: all 0.3s ease 0s;
-			width: 11px;
-			height: 7px;
-			// background: url("") center / 100% no-repeat;
+			// content: "";
+			// display: inline-block;
+			// transition: all 0.3s ease 0s;
+			// width: 11px;
+			// height: 7px;
+			// // background: url("") center / 100% no-repeat;
 		}
 	}
 	&__input {

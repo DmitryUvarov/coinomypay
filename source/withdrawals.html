@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        @@include('_header.html', {
+        "nav": true
+        })
+
+        <main>
+
+            <section class="transfer withdrawals-block">
+                <div class="transfer__container container">
+                    <div class="transfer__body">
+                        <h1 class="transfer__title title">Transfer</h1>
+                        <div class="transfer__tabs deposits-tabs">
+                            <div class="tabs__nav deposits-tabs-nav">
+                                <button class="tabs__nav-btn active deposits-tab-btn" type="button" data-tab="#tab_1">
+                                    <img src="img/btc.png" width="21" height="21" alt="">
+                                    <span>Bitcoin</span>
+                                </button>
+                                <button class="tabs__nav-btn deposits-tab-btn" type="button" data-tab="#tab_2">
+                                    <img src="img/eth.png" width="21" height="21" alt="">
+                                    <span>Ethereum</span>
+                                </button>
+                                <button class="tabs__nav-btn deposits-tab-btn" type="button" data-tab="#tab_3">
+                                    <img src="img/ltc.png" width="21" height="21" alt="">
+                                    <span>Litecoin</span>
+                                </button>
+                            </div>
+                            <div class="tabs__content">
+                                <div class="tabs__item active" id="tab_1">
+                                    <form action="#" class="form-tabs">
+                                        <fieldset class="form-tabs__fieldset">
+                                            <div class="form-tabs__text">
+                                                <div class="form-tabs__title">Destination <span>BTC</span> address</div>
+                                                <div class="form-tabs__subtitle">Please double check this address</div>
+                                            </div>
+                                            <div class="form-tabs__input">
+                                                <input type="text" placeholder="Please enter recipient’s BTC address">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form-tabs__fieldset">
+                                            <div class="form-tabs__text">
+                                                <div class="form-tabs__title">Amount <span>BTC</span></div>
+                                                <div class="form-tabs__subtitle">Maximum amount withdrawable: 2 <span>BTC</span></div>
+                                            </div>
+                                            <div class="form-tabs__input">
+                                                <input type="text" placeholder="Please enter an amount in BTC">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form-tabs__fieldset">
+                                            <div class="form-tabs__text">
+                                                <div class="form-tabs__title">Bitcoin Network Fee</div>
+                                                <div class="form-tabs__subtitle">Transactions on the Bitcoin network are priorirized by fees</div>
+                                            </div>
+                                            <div class="form-tabs__commission">0.000086 <span>BTC</span></div>
+                                        </fieldset>
+                                        <fieldset class="form-tabs__fieldset form-tabs__fieldset--btn">
+                                            <button class="form-tabs__btn btn">Withdraw Now</button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div class="tabs__item" id="tab_2">
+                                    <form action="#" class="form-tabs">
+                                        <fieldset class="form-tabs__fieldset">
+                                            <div class="form-tabs__text">
+                                                <div class="form-tabs__title">Destination <span>ETH</span> address</div>
+                                                <div class="form-tabs__subtitle">Please double check this address</div>
+                                            </div>
+                                            <div class="form-tabs__input">
+                                                <input type="text" placeholder="Please enter recipient’s ETH address">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form-tabs__fieldset">
+                                            <div class="form-tabs__text">
+                                                <div class="form-tabs__title">Amount <span>ETH</span></div>
+                                                <div class="form-tabs__subtitle">Maximum amount withdrawable: 2 <span>ETH</span></div>
+                                            </div>
+                                            <div class="form-tabs__input">
+                                                <input type="text" placeholder="Please enter an amount in ETH">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form-tabs__fieldset">
+                                            <div class="form-tabs__text">
+                                                <div class="form-tabs__title">Bitcoin Network Fee</div>
+                                                <div class="form-tabs__subtitle">Transactions on the Ethereum network are priorirized by fees</div>
+                                            </div>
+                                            <div class="form-tabs__commission">0.000086 <span>ETH</span></div>
+                                        </fieldset>
+                                        <fieldset class="form-tabs__fieldset form-tabs__fieldset--btn">
+                                            <button class="form-tabs__btn btn">Withdraw Now</button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div class="tabs__item" id="tab_3">
+                                    <form action="#" class="form-tabs">
+                                        <fieldset class="form-tabs__fieldset">
+                                            <div class="form-tabs__text">
+                                                <div class="form-tabs__title">Destination <span>LTC</span> address</div>
+                                                <div class="form-tabs__subtitle">Please double check this address</div>
+                                            </div>
+                                            <div class="form-tabs__input">
+                                                <input type="text" placeholder="Please enter recipient’s LTC address">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form-tabs__fieldset">
+                                            <div class="form-tabs__text">
+                                                <div class="form-tabs__title">Amount <span>LTC</span></div>
+                                                <div class="form-tabs__subtitle">Maximum amount withdrawable: 2 <span>LTC</span></div>
+                                            </div>
+                                            <div class="form-tabs__input">
+                                                <input type="text" placeholder="Please enter an amount in LTC">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form-tabs__fieldset">
+                                            <div class="form-tabs__text">
+                                                <div class="form-tabs__title">Bitcoin Network Fee</div>
+                                                <div class="form-tabs__subtitle">Transactions on the Litecoin network are priorirized by fees</div>
+                                            </div>
+                                            <div class="form-tabs__commission">0.000086 <span>LTC</span></div>
+                                        </fieldset>
+                                        <fieldset class="form-tabs__fieldset form-tabs__fieldset--btn">
+                                            <button class="form-tabs__btn btn">Withdraw Now</button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        @@include('_footer.html')
+    </div>
+
+    @@include('_js.html')
+</body>
+
+</html>
