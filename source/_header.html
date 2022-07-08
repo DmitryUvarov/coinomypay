@@ -10,7 +10,7 @@
             <nav class="header__menu menu">
                 <ul class="menu__list" data-spollers="1350,max">
                     <li class="menu__item"><a class="menu__link" href="#">Trading</a></li>
-                    <li class="menu__item menu__arrow">
+                    <li class="menu__item menu__arrow market-tools">
                         <span data-spoller><span>Market tools</span>
                             <svg width="7.5" height="5">
                                 <use xlink:href="img/sprite.svg#arrow-down"></use>
@@ -34,32 +34,75 @@
                             </svg>
                         </span>
                         <ul class="menu__sublist">
-                            <li class="menu__subitem"><a href="#">Profile</a></li>
-                            <li class="menu__subitem"><a href="#">Verification</a></li>
-                            <li class="menu__subitem"><a href="#">Security</a></li>
-                            <li class="menu__subitem"><a href="#">API Tokens</a></li>
+                            <li class="menu__subitem"><a href="#">
+                                    <div class="profile__image">
+                                        <svg width="12.16" height="15.81" style="stroke: none;">
+                                            <use xlink:href="img/sprite.svg#profile"></use>
+                                        </svg>
+                                    </div>Profile
+                                </a></li>
+                            <li class="menu__subitem"><a href="#">
+                                    <div class="profile__image">
+                                        <svg width="12.16" height="10.8" style="stroke: none;">
+                                            <use xlink:href="img/sprite.svg#verificatio"></use>
+                                        </svg>
+                                    </div>Verification
+                                </a></li>
+                            <li class="menu__subitem"><a href="#">
+                                    <div class="profile__image">
+                                        <svg width="12.16" height="13.32">
+                                            <use xlink:href="img/sprite.svg#security"></use>
+                                        </svg>
+                                    </div>Security
+                                </a></li>
+                            <li class="menu__subitem"><a href="#">
+                                    <div class="profile__image">
+                                        <svg width="12.16" height="6.6" style="stroke: none;">
+                                            <use xlink:href="img/sprite.svg#api"></use>
+                                        </svg>
+                                    </div>API Tokens
+                                </a></li>
                         </ul>
                     </li>
-                    <li class="menu__item menu__arrow">
+                    <li class="menu__item menu__arrow my-wallet">
                         <span data-spoller><span>My Wallet</span>
                             <svg width="7.5" height="5">
                                 <use xlink:href="img/sprite.svg#arrow-down"></use>
                             </svg>
                         </span>
                         <ul class="menu__sublist">
-                            <li class="menu__subitem"><a href="#">Balance</a></li>
-                            <li class="menu__subitem"><a href="#">Deposits</a></li>
-                            <li class="menu__subitem"><a href="#">Withdrawals</a></li>
-                            <li class="menu__subitem"><a href="#">Transfer</a></li>
-                            <li class="menu__subitem"><a href="#">Transactions</a></li>
+                            <li class="menu__subitem"><a href="#">
+                                    <svg width="11.59" height="11.44" style="stroke: none;">
+                                        <use xlink:href="img/sprite.svg#balance"></use>
+                                    </svg>Balance</a></li>
+                            <li class="menu__subitem"><a href="#">
+                                    <svg width="11.59" height="13.11" style="stroke: none;">
+                                        <use xlink:href="img/sprite.svg#deposits"></use>
+                                    </svg>Deposits</a></li>
+                            <li class="menu__subitem"><a href="#">
+                                    <svg width="11.59" height="8.44" style="stroke: none;">
+                                        <use xlink:href="img/sprite.svg#withdrawals"></use>
+                                    </svg>Withdrawals</a></li>
+                            <li class="menu__subitem"><a href="#">
+                                    <svg width="11.59" height="9" style="stroke: none;">
+                                        <use xlink:href="img/sprite.svg#transfers"></use>
+                                    </svg>Transfer</a></li>
+                            <li class="menu__subitem"><a href="#">
+                                    <svg width="11.59" height="11.92" style="stroke: none;">
+                                        <use xlink:href="img/sprite.svg#transactions"></use>
+                                    </svg>Transactions</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
 
-            <select name="example" data-type="img">
-                <option value="1" data-image="img/btc.png"></option>
-                <option value="2" data-image="img/ltc.png"></option>
+            <select name="example" data-type="img" class="lang-select">
+                <option value="1" data-image="img/eng.svg">English</option>
+                <option value="2" data-image="img/ru.svg">Русский</option>
+                <option value="2" data-image="img/itali.svg">Italiano</option>
+                <option value="2" data-image="img/spain.svg">Español</option>
+                <option value="2" data-image="img/turkey.svg">Türk</option>
+                <option value="2" data-image="img/china.svg">中國人</option>
             </select>
 
             <div id="profile" data-href="/profile.html" class="header__profile profile" data-da=".header__menu,600,2">
@@ -69,7 +112,7 @@
                         <img src="img/profile.png" width="33" height="33" alt="profile">
                     </div>
                     <div class="profile__sublist">
-                        <div class="profile__info info-profile">
+                        <div class="profile__info info-profile" data-da=".header__menu,991,0">
                             <div class="info-profile__image">
                                 <img src="img/profile-big.png" width="69" height="69" alt="prolife">
                             </div>
@@ -80,14 +123,53 @@
                             </div>
                         </div>
                         <ul class="profile__links">
-                            <li class="profile__link"><a href="#">Profile</a></li>
-                            <li class="profile__link"><a href="#">Verification</a></li>
-                            <li class="profile__link"><a href="#">Security</a></li>
-                            <li class="profile__link"><a href="#">API Tokens</a></li>
+                            <li class="profile__link">
+                                <a href="#">
+                                    <div class="profile__image">
+                                        <svg width="14" height="18" style="stroke: none;">
+                                            <use xlink:href="img/sprite.svg#profile"></use>
+                                        </svg>
+                                    </div>
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li class="profile__link">
+                                <a href="#">
+
+                                    <div class="profile__image">
+                                        <svg width="14" height="12.43" style="stroke: none;">
+                                            <use xlink:href="img/sprite.svg#verificatio"></use>
+                                        </svg>
+                                    </div>
+                                    <span>Verification</span>
+                                </a>
+                            </li>
+                            <li class="profile__link">
+                                <a href="#">
+                                    <div class="profile__image">
+                                        <svg width="14" height="15.33">
+                                            <use xlink:href="img/sprite.svg#security"></use>
+                                        </svg>
+                                    </div>
+                                    <span>Security</span>
+                                </a>
+                            </li>
+                            <li class="profile__link">
+                                <a href="#">
+                                    <div class="profile__image">
+                                        <svg width="14" height="7.59" style="stroke: none;">
+                                            <use xlink:href="img/sprite.svg#api"></use>
+                                        </svg>
+                                    </div>
+                                    <span>API Tokens</span>
+                                </a>
+                            </li>
                         </ul>
-                        <button data-da=".header__menu,991,0" type="button" class="page__theme">
-                            <p class="whrite-mode">White mode</p>
-                            <p class="blue-mode">Blue mode</p>
+                        <button data-da=".header__menu,991,20" type="button" class="page__theme">
+                            <svg width="15" height="15">
+                                <use xlink:href="img/sprite.svg#theme"></use>
+                            </svg>
+                            <p>Theme</p>
                             <span></span>
                         </button>
                     </div>

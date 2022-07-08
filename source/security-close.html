@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        @@include('_header.html', {
+        "nav": true
+        })
+
+        <main>
+            @@include('_page-nav.html', {
+            "link": "3"
+            })
+
+            <section class="security-close">
+                <div class="security-close__container container">
+                    <div class="security-close__body">
+                        <div class="security-close__title">Close account</div>
+                        <div class="security-close__content">
+                            <div class="information__content">
+                                <div class="information__item"><span>You will never be able to retrieve this account</span></div>
+                                <div class="information__item"><span>All trading capacities of this account will be disabled</span></div>
+                                <div class="information__item"><span>All API keys for this account will be deleted</span></div>
+                                <div class="information__item"><span>All approved devices for this account will be removed</span></div>
+                                <div class="information__item"><span>All pending withdrawals from this account will be cancelled</span></div>
+                                <div class="information__item"><span>All pending orders in this account will be cancelled</span></div>
+                                <div class="information__item"><span>To prevent asset losses, please transfer all the assets out from your account.</span></div>
+                            </div>
+                            <form action="#" class="create-token__form create-token__form--security-close">
+                                <fieldset class="create-token__fieldset fieldset-checkbox">
+                                    <input id="ch1" type="checkbox" checked>
+                                    <label class="create-token__checkbox checkbox-label" for="ch1"> <span>I understand the consequences of closing account</span></label>
+                                </fieldset>
+                                <fieldset class="create-token__fieldset fieldset-checkbox">
+                                    <input id="ch2" type="checkbox">
+                                    <label class="create-token__checkbox checkbox-label" for="ch2"> <span>I acknowledge that I can't retrieve the funds in my balance after closing account.</span></label>
+                                </fieldset>
+                                <fieldset class="create-token__fieldset fieldset-btn">
+                                    <button class="create-token__btn">Close account</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        @@include('_footer.html')
+    </div>
+
+    @@include('_js.html')
+</body>
+
+</html>

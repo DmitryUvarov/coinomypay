@@ -12,6 +12,28 @@ html.dark {
             fill: #fff;
         }
     }
+    & .profile__link a svg {
+        fill: #fff;
+        stroke: #fff;
+    }
+    & .profile__link {
+
+        @media (any-hover: hover) {
+            &:hover {
+                & svg {
+                    fill:  var(--hoverText);
+                    stroke:  var(--hoverText);
+                }
+            }
+        }
+    }
+    & .menu__subitem {
+
+        & svg {
+            fill: #fff;
+            stroke: #fff;
+        }
+    }
 }
 body.active {
     & .menu {
@@ -118,17 +140,16 @@ body.active {
         transition: left .3s ease;
         background-color: var(--bgColor);
         z-index: 10;
-        padding: 100px 20px 40px;
+        padding: 100px 30px 40px;
 
 
         margin: 0;
 
         & .menu__item {
-            &:not(:last-child) {
-                margin-bottom: 25px;
-            }
+            margin-bottom: 25px;
             & a,  & span{
-                font-size: 30px;
+                @include adaptive-value("font-size", 30, 15, 1);
+                line-height: 120%;
 
             }
         }
@@ -136,7 +157,13 @@ body.active {
     &__list {
         @media (min-width: 1350px) {
             display: flex;
+            margin-top: 0;
         }
+        @media (max-width: 1350px) {
+            display: flex;
+            flex-direction: column;
+        }
+        margin-top: 13px;
 
     }
     &__item {
@@ -149,10 +176,7 @@ body.active {
         }
         & svg {
             margin-left: 6px;
-            @media (max-width: 1350px) {
-                width: 20px;
-                height: 20px;
-            }
+
         }
         & a, & span {
             cursor: pointer;
@@ -184,13 +208,13 @@ body.active {
             }
         }
         &.hide-pc {
-            @media (min-width: 991px) {
+            @media (min-width: 1350px) {
                 display: none;
                 position: absolute;
                 top: -9999px;
             }
-            @media (max-width: 991px) {
-                order: 7;
+            @media (max-width: 1350px) {
+                order: -2;
             }
         }
 
@@ -228,9 +252,23 @@ body.active {
             transition: all .3s ease;
         }
 
-        &:last-child {
-            margin-left: auto;
+        @media (min-width: 1350px) {
+            &:last-child {
+                margin-left: auto;
+            }
         }
+
+        &.my-wallet {
+            @media (max-width: 1350px) {
+                order: -1;
+            }
+        }
+        &.market-tools {
+            @media (max-width: 1350px) {
+                order: 5;
+            }
+        }
+
     }
     &__sublist {
         @media (min-width: 1350px) {
@@ -238,7 +276,7 @@ body.active {
             position: absolute;
             display: none;
             top: calc(100% + 7px);
-            padding: 0 5px 12px 5px ;
+            padding: 0px 13px 9px 10px;
             background: #FFFFFF;
             border: 1px solid #1346CC;
             border-radius: 5px;
@@ -246,24 +284,31 @@ body.active {
 
         }
         @media (max-width: 1350px) {
-            padding: 0 5px 12px 20px ;
+            padding: 0 5px 12px 12px ;
         }
     }
     &__subitem {
-        border-bottom: 1px solid #D9D9D9;
         margin-top: 12px;
         min-width: 142px;
         & a {
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
-            font-size: 12.1776px;
-            line-height: 125%;
+            font-size: 14.69px;
+            line-height: 128%;
             color: var(--checGray);
-
+            display: flex;
+            align-items: center;
             @media (max-width: 1350px) {
-                font-size: clamp(20px, 2.174vw, 25px) !important;
+                font-size: calc(12px + 13 * ((100vw - 320px)/ 860)) !important;
+                line-height: 125%;
+
             }
+        }
+        & svg {
+            margin-right: 6px;
+            stroke: #b6b6b6;
+            fill: #b6b6b6;
         }
         @media (max-width: 1350px) {
             border: 0;
@@ -283,7 +328,6 @@ body.active {
     }
     @media (min-width: 600px) and (max-width: 1350px) {
         margin-left: auto;
-        margin-right: 30px;
     }
     @media (max-width: 991px) {
         display: none;
@@ -347,31 +391,47 @@ body.active {
         margin-top: 22px;
     }
     &__link {
-        border-bottom: 1px solid #D9D9D9;
-        margin-top: 10px;
+        margin-top: 9px;
         & a {
-
+            display: flex;
+            align-items: center;
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
-            font-size: 20.3842px;
-            line-height: 125%;
             color: var(--checGray);
+            font-size: 14.69px;
+            line-height: 128%;
 
             transition: color .3s ease;
-            @media (any-hover: hover) {
-                &:hover {
+
+            & svg {
+                fill: #6b6b6b;
+                stroke: #6b6b6b;
+                transition: all .3s ease;
+            }
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                & a,
+                & svg {
                     color: var(--hoverText);
+                    fill:  var(--hoverText);
+                    stroke:  var(--hoverText);
                 }
             }
         }
 
+
+    }
+    &__image {
+        margin-right: 6px;
     }
 }
 
 .info-profile {
 
-
+    border-bottom: 1px solid var(--tableBorder);
+    padding-bottom: 17px;
     &__image {
         flex-shrink: 0;
         display: block;
@@ -396,7 +456,15 @@ body.active {
             &:not(:last-child) {
                 margin-bottom: 7px;
             }
+            @media (max-width: 991px) {
+                color: var(--menuColorUser);
+            }
+        }
+        & > span {
 
+            @media (max-width: 991px) {
+                display: block;
+            }
         }
     }
     &__name {
@@ -414,10 +482,24 @@ body.active {
     }
 }
 
-.burger {
+
+.select_lang-select {
+    margin-left: 25px;
+    z-index: 20;
+    @media (max-width: 1350px) {
+        margin-right: 30px
+    }
+    @media (max-width: 767px) {
+        margin-right: 15px
+    }
     @media (max-width: 991px) {
         margin-left: auto;
     }
+}
+
+
+.burger {
+    order: 20;
 }
 
 
@@ -459,7 +541,7 @@ body.active {
                 position: absolute;
                 width: 100%;
                 height: 4px;
-                background-color: #1346CC;
+                background-color: #0051F4;
                 &:first-child {
                     top: 0px;
                 }
@@ -473,3 +555,4 @@ body.active {
             }
     }
 }
+

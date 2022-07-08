@@ -169,11 +169,12 @@ function select_get_options(select_options) {
         for (let index = 0; index < select_options.length; index++) {
             const select_option = select_options[index];
             const select_option_value = select_option.value;
+            const select_selected_text = select_option.text;
             if (select_option_value != '') {
                 const select_option_text = select_option.innerHTML;
                 const select_option_option_image = select_option.getAttribute('data-image');
 
-                select_options_content = select_options_content + '<div data-value="' + select_option_value + '" class="select__option"><img src="' + select_option_option_image + '"></div>';
+                select_options_content = select_options_content + '<div data-value="' + select_option_value + '" class="select__option"><span class="title-span">' + select_selected_text + '</span><img src="' + select_option_option_image + '"></div>';
             }
         }
         return select_options_content;

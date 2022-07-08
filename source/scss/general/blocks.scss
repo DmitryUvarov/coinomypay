@@ -1,3 +1,4 @@
+@import "general/mixin";
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/api-tokens";
@@ -16,6 +17,7 @@
 @import "blocks/deposits";
 @import "blocks/message";
 @import "blocks/withdrawals";
+@import "blocks/security-close";
 
 @import "webp";
 @import "app/select";
