@@ -17,6 +17,12 @@ margin-bottom: 35px;
     }
     .block-title {
     }
+
+    & tbody {
+        & td {
+            vertical-align: middle;
+        }
+    }
 }
 
 
@@ -78,7 +84,19 @@ margin-bottom: 35px;
             margin-right: 5px;
             fill: var(--checGray);
         }
-        & .status {
+        & .status-input {
+            display: none;
+            &:checked ~ label::after{
+                left: 100%;
+                transform: translateX(-100%);
+            }
+            &:checked ~ label {
+                background: #0077F6;
+            }
+        }
+        & label {
+
+
             position: relative;
             width: 40px;
             height: 15px;
@@ -86,6 +104,9 @@ margin-bottom: 35px;
             border-radius: 57px;
             transition: all .3s ease;
             &::before {
+
+            }
+            &::after {
                 content: '';
                 display: block;
                 position: absolute;
@@ -95,15 +116,7 @@ margin-bottom: 35px;
                 height: 15px;
                 border-radius: 50%;
                 background: #6B6B6B;
-            }
-
-            &.active {
-                background: #0077F6;
-
-                &::before {
-                    left: auto;
-                    right: 0;
-                }
+                transition: all .3s ease;
             }
         }
     }

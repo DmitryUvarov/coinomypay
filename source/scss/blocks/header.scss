@@ -148,7 +148,7 @@ body.active {
         & .menu__item {
             margin-bottom: 25px;
             & a,  & span{
-                @include adaptive-value("font-size", 30, 15, 1);
+                @include adaptive-value("font-size", 30, 20, 1);
                 line-height: 120%;
 
             }
@@ -300,7 +300,7 @@ body.active {
             display: flex;
             align-items: center;
             @media (max-width: 1350px) {
-                font-size: calc(12px + 13 * ((100vw - 320px)/ 860)) !important;
+                font-size: calc(15px + 13 * ((100vw - 320px)/ 860)) !important;
                 line-height: 125%;
 
             }

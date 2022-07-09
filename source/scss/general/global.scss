@@ -6,6 +6,24 @@
 
 html.light {
 
+  & footer {
+    background-color: #0f204c !important;
+
+    & .footer__info {
+      color: #fff;
+    }
+    & .menu-footer__item a {
+      color: #fff;
+      @media (any-hover: hover) {
+        &:hover {
+          color: #1346cc;
+        }
+      }
+    }
+    & .menu-footer__title {
+      color: #fff;
+    }
+  }
 
   & .page__theme {
     .blue-mode {
@@ -79,6 +97,10 @@ html {
       line-height: 128%;
       color: var(--checGray);
       white-space: nowrap;
+
+      @media (max-width: 991px) {
+        font-size: calc(20px + 10 * ((100vw - 320px)/ 860));
+      }
     }
 
     & span {

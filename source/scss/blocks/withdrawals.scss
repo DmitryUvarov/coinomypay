@@ -17,6 +17,9 @@
             margin-top: 13px;
         }
     }
+    & .form-tabs__btn {
+        font-weight: 400;
+    }
     & .form-tabs__fieldset {
 
         @media (min-width: 767px) {

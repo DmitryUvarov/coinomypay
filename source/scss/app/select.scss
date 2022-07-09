@@ -6,6 +6,13 @@ html.dark {
 	& .select__value::after {
 		background: url("../img/arrow-down-dark.svg") center / 100% no-repeat;
 	}
+	& .select__option {
+		@media (min-width: 992px) {
+			&:hover {
+				background: #142993;
+			}
+		}
+	}
 }
 html.light {
 	& .select__value::after {
