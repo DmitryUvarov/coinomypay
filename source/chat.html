@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        @@include('_header.html', {
+        "nav": true
+        })
+
+        <main>
+
+            <section class="chat">
+
+                <div class="container">
+
+                    <div class="chat__title">
+                        <img class="chat__img" src="../img/logo-light.png" alt="">
+                        <div class="chat__title-name">Live support service</div>
+                    </div>
+
+                    <div class="chat__title chat__title-border">
+                        <div class="chat__title-name">Chat</div>
+                    </div>
+                    <div class="chat__container">
+                        <div class="chat__content" id="chat_content">
+
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="chat__type-message">
+                        <div class="chat__message-box">
+                            <textarea class="chat__message-input" placeholder="Type a message"></textarea>
+                            <div class="chat__message-button">
+                                <a href="#" class="chat__message-button-item"></a>
+                                <form action="../ajax/ajax?action=SEND_SUPPORT_IMAGE" method="POST" enctype="multipart/form-data">
+                                    <input style="display: none;" id="support_send_photo" accept="image/x-png,image/jpeg" name="support_send_image" type="file">
+                                    <button id="send_image_post" style="display: none;"></button>
+                                </form>
+                            </div>
+                        </div>
+                        <button id="send_support" class="chat__message-send">Send</button>
+                    </div>
+                </div>
+
+
+
+
+
+            </section>
+
+        </main>
+
+        @@include('_footer.html')
+    </div>
+
+    @@include('_js.html')
+</body>
+
+</html>
