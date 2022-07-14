@@ -1,6 +1,13 @@
 .withdrawals-block {
 
+    & .form-tabs {
 
+    }
+    & .withdrawals__content {
+        background: var(--themeColor2);
+        border: 1px solid var(--tableBorder);
+        border-radius: 9px;
+    }
 
     & .form-tabs__commission {
         font-family: 'Inter';

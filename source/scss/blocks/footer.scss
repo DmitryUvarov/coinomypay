@@ -19,7 +19,7 @@ html.dark {
         "b c";
         column-gap: 50px;
 
-        @media (max-width: 991px) {
+        @media (max-width: 1240px) {
         grid-template-areas:
         "a ."
         "b ."
@@ -55,16 +55,16 @@ html.dark {
     grid-template-columns: repeat(4, max-content);
     column-gap: 50px;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1240px) {
         column-gap: 35px;
         margin-top: 30px;
     }
-    @media (max-width: 767px) {
+    @media (max-width: 1240px) {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 30px;
         column-gap: 35px;
     }
-    @media (max-width: 454px) {
+    @media (max-width: 767px) {
         grid-template-columns: repeat(1, 1fr);
         column-gap: 35px;
     }

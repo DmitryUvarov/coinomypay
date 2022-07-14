@@ -2,6 +2,7 @@
 //@@include('app/tabs.js');
 //@@include('app/spoller.js');
 //@@include('app/select.js');
+//@@include('app/popup.js');
 
 // Функция для проверки на мобильные устрайства
 var isMobile = {
@@ -55,11 +56,7 @@ window.onload = function () {
     function ducumentActions(e) {
         const targerElement = e.target;
         if (window.innerWidth > 1350) {
-            if (targerElement.closest(".menu__item.menu__arrow")) {
-                console.log(targerElement);
-                if (targerElement.closest(".menu__link")) {
-                    console.log('link')
-                }
+            if (targerElement.closest(".menu__item.menu__arrow") && !targerElement.closest(".menu__item.menu__arrow._hover")) {
                 targerElement.closest('.menu__item').classList.toggle('_hover');
             }
             if (!targerElement.closest('.menu__item.menu__arrow')) {
@@ -75,12 +72,10 @@ window.onload = function () {
         }
 
         if (window.innerWidth > 600) {
-            if (targerElement.closest("#profile")) {
+            if (targerElement.closest("#profile") && !targerElement.closest("#profile.active")) {
                 targerElement.closest('#profile').classList.toggle('active');
             }
-            if (!targerElement.closest("#profile") && document.querySelector('#profile.active')) {
-                console.log("test");
-                console.log(targerElement);
+            if (!targerElement.closest("#profile") && !targerElement.closest(".profile__sublist") && document.querySelector('#profile.active')) {
                 let profileActive = document.querySelector('#profile.active');
                 profileActive.classList.remove('active');
             }

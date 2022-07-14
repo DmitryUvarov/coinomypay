@@ -91,6 +91,90 @@
     & .form-tabs__btn {
         font-weight: 400;
     }
+
+
+
+    .select__title {
+        padding: 9px 11px;
+        border-radius: 4px;
+    }
+    .select__value {
+
+        & img {
+            width: 25px;
+            height: 25px;
+        }
+        & .title-span {
+            display: block;
+        }
+        & span {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: clamp(14px, 1.391vw, 16px);
+            line-height: 118%;
+            color: var(--mainColor);
+
+        }
+        & .select-span-text, & .title-span {
+            margin-left: 8px;
+        }
+        & .in-header-hide {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: clamp(14px, 1.391vw, 16px);
+            line-height: 118%;
+            color: #8B97C1;
+            margin-left: 13px;
+        }
+        &::after {
+            margin-left: auto;
+        }
+    }
+    .select__options {
+        border-radius: 4px;
+        overflow: auto;
+        max-height: 187px;
+        height: auto;
+        top: 50px;
+        width: 100%;
+
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: var(--scrollBg);
+            border-radius: 13px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #1A66FF;
+            border-radius: 13px;
+        }
+    }
+    .select__option {
+        padding: 3px 10px;
+        justify-content: flex-start;
+
+        & img {
+            margin-right: 8px;
+            width: 25px;
+            height: 25px;
+        }
+        & .in-header-hide {
+            display: block;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: clamp(14px, 1.391vw, 16px);
+            line-height: 118%;
+            color: #8B97C1;
+            margin-left: 13px;
+        }
+    }
 }
 
 
@@ -152,18 +236,18 @@
         max-width: 343px;
         width: 100%;
         & input {
+            padding: 12px 11px;
             font-family: 'Inter';
             font-style: normal;
-            font-weight: 500;
-            font-size: 12.3439px;
-            line-height: 125%;
-            color: var(--tableBody);
-            padding: 6px 18px;
+            font-weight: 400;
+            font-size: clamp(14px, 1.391vw, 16px);
+            line-height: 118%;
+            color: var(--mainColor);
+            background: var(--bgColor);
             border: 1px solid var(--tableBorder);
-            border-radius: 9px;
-            background-color: var(--tagBody);
+            border-radius: 4px;
             &::placeholder {
-                color: var(--tableBody);
+                color: #8B97C1;
             }
 
 

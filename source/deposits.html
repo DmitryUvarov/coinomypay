@@ -21,68 +21,81 @@
                 <div class="transfer__container container">
                     <div class="transfer__body">
                         <h1 class="transfer__title title">Cold Wallet Deposit Address</h1>
-                        <div class="transfer__tabs deposits-tabs">
-                            <div class="tabs__nav deposits-tabs-nav">
-                                <button class="tabs__nav-btn active deposits-tab-btn" type="button" data-tab="#tab_1">
-                                    <img src="img/btc.png" width="21" height="21" alt="">
-                                    <span>Bitcoin</span>
-                                </button>
-                                <button class="tabs__nav-btn deposits-tab-btn" type="button" data-tab="#tab_2">
-                                    <img src="img/eth.png" width="21" height="21" alt="">
-                                    <span>Ethereum</span>
-                                </button>
-                                <button class="tabs__nav-btn deposits-tab-btn" type="button" data-tab="#tab_3">
-                                    <img src="img/ltc.png" width="21" height="21" alt="">
-                                    <span>Litecoin</span>
-                                </button>
+                        <div class="deposits__body">
+                            <div class="deposits__step deposits-step deposits-step--one">
+                                <div class="deposits-step__title">Select cryptocurrency and enter amount</div>
+                                <div class="deposits-step__subtitle">To replenish the balance, please select a currency
+                                    and enter the amount.</div>
+                                <form action="#" class="deposits-step__form">
+                                    <fieldset>
+                                        <label for="">Select cryptocurrency</label>
+                                        <select name="deposits" id="" data-type="img">
+                                            <option value="1" data-image="img/btc.png" data-carency="BTC">Bitcoin</option>
+                                            <option value="2" data-image="img/eth.png" data-carency="ETH">Ethereum</option>
+                                            <option value="3" data-image="img/ltc.png" data-carency="LTC">Litecoin</option>
+                                            <option value="4" data-image="img/BCH.png" data-carency="BCH">Bitcoin Cash</option>
+                                            <option value="5" data-image="img/ERC20.png" data-carency="ERC20">Tether</option>
+                                            <option value="6" data-image="img/ERC20.png" data-carency="TRC20">Tether</option>
+                                            <option value="7" data-image="img/SOL.png" data-carency="SOL">Solana</option>
+                                            <option value="8" data-image="img/UNI.png" data-carency="UNI">Uniswap</option>
+                                            <option value="9" data-image="img/TRX.png" data-carency="TRX">TRON</option>
+                                            <option value="10" data-image="img/XRP.png" data-carency="XRP">Ripple</option>
+                                            <option value="11" data-image="img/ETC.png" data-carency="ETC">Ethereum Classic</option>
+                                            <option value="12" data-image="img/DOGE.png" data-carency="DOGE">DogeCoin</option>
+                                            <option value="13" data-image="img/ADA.png" data-carency="ADA">Cardano</option>
+                                            <option value="14" data-image="img/DASH.png" data-carency="DASH">Dash</option>
+                                            <option value="15" data-image="img/BUSD.png" data-carency="BUSD">Binance USD</option>
+                                            <option value="16" data-image="img/USDC.png" data-carency="USDC">USD Coin</option>
+                                            <option value="17" data-image="img/XMR.png" data-carency="XMR">Monero</option>
+                                            <option value="18" data-image="img/BNB.png" data-carency="BNB">Binance Coin</option>
+                                            <option value="19" data-image="img/EOS.png" data-carency="EOS">Eos</option>
+                                            <option value="20" data-image="img/ONT.png" data-carency="ONT">Ontology</option>
+                                            <option value="21" data-image="img/NEO.png" data-carency="NEO">Neo Smart Economy</option>
+                                            <option value="22" data-image="img/LINK.png" data-carency="LINK">Chainlink</option>
+                                            <option value="23" data-image="img/QTUM.png" data-carency="QTUM">Qtum</option>
+                                            <option value="24" data-image="img/KAVA.png" data-carency="KAVA">Kava</option>
+                                            <option value="25" data-image="img/FIL.png" data-carency="FIL">Filecoin</option>
+                                            <option value="26" data-image="img/ATM.png" data-carency="ATM">ATM Fan Coin</option>
+                                            <option value="27" data-image="img/AVA.png" data-carency="AVA">Travala</option>
+                                            <option value="28" data-image="img/CHZ.png" data-carency="CHZ">Chiliz</option>
+                                            <option value="29" data-image="img/COTI.png" data-carency="COTI">COTI</option>
+                                            <option value="30" data-image="img/DGB.png" data-carency="DGB">DigiByte</option>
+                                        </select>
+                                    </fieldset>
+                                    <fieldset>
+                                        <label for="">Enter amount</label>
+                                        <input type="text" placeholder="0.005">
+                                    </fieldset>
+                                    <fieldset>
+                                        <button class="deposits-step__btn btn">Continue</button>
+                                    </fieldset>
+                                </form>
                             </div>
-                            <div class="tabs__content">
-                                <div class="tabs__item active" id="tab_1">
-                                    <div class="deposits-content">
-                                        <div class="deposits-content__image">
-                                            <img src="img/qrcode.png" width="102" height="102" alt="qrcode">
-                                        </div>
-                                        <form action="#" class="deposits-content__form">
-                                            <input type="text" class="deposits-content__input" value="3LVz6subAfWAqwLph2FVc2annvd126yv81">
-                                            <button class="deposits-content__btn btn">Copy</button>
-                                        </form>
-                                        <div class="information__content">
-                                            <div class="information__item"><span>Transfer funds to users of this site WITHOUT COMMISSION</span></div>
-                                            <div class="information__item"><span>Transfers normally take about 1 to 60 minutes to send, on occasion it can take a few hours if the crypto network is slow.</span></div>
-                                        </div>
-                                    </div>
+                            <div class="deposits__step deposits-step deposits-step--two">
+                                <div class="deposits-step__title">Replenishment process</div>
+                                <div class="deposits-step__subtitle">Send the exact specified amount
+                                    to the specified address</div>
+                                <div class="deposits-step__image">
+                                    <img src="img/qrcode.png" width="108" height="107" alt="">
+                                    <div class="deposits-step__timer">00^00</div>
                                 </div>
-                                <div class="tabs__item" id="tab_2">
-                                    <div class="deposits-content">
-                                        <div class="deposits-content__image">
-                                            <img src="img/qrcode.png" width="102" height="102" alt="qrcode">
-                                        </div>
-                                        <form action="#" class="deposits-content__form">
-                                            <input type="text" class="deposits-content__input" value="3LVz6subAfWAqwLph2FVc2annvd126yv81">
-                                            <button class="deposits-content__btn btn">Copy</button>
-                                        </form>
-                                        <div class="information__content">
-                                            <div class="information__item"><span>Transfer funds to users of this site WITHOUT COMMISSION</span></div>
-                                            <div class="information__item"><span>Transfers normally take about 1 to 60 minutes to send, on occasion it can take a few hours if the crypto network is slow.</span></div>
-                                        </div>
-                                    </div>
+                                <form action="#" class="deposits-step__form">
+                                    <fieldset>
+                                        <label for="">Enter amount</label>
+                                        <input type="text" placeholder="0.005">
+                                    </fieldset>
+                                    <fieldset>
+                                        <label for="">Enter amount</label>
+                                        <input type="text" value="3LVz6subAfWAqwLph2FVc2annvd126yv81">
+                                    </fieldset>
+                                    <fieldset>
+                                        <button class="deposits-step__btn btn">Continue</button>
+                                    </fieldset>
+                                </form>
+                                <div class="information__content">
+                                    <div class="information__item"><span>Transfer funds to users of this site WITHOUT COMMISSION</span></div>
+                                    <div class="information__item"><span>Transfers normally take about 1 to 60 minutes to send, on occasion it can take a few hours if the crypto network is slow.</span></div>
                                 </div>
-                                <div class="tabs__item" id="tab_3">
-                                    <div class="deposits-content">
-                                        <div class="deposits-content__image">
-                                            <img src="img/qrcode.png" width="102" height="102" alt="qrcode">
-                                        </div>
-                                        <form action="#" class="deposits-content__form">
-                                            <input type="text" class="deposits-content__input" value="3LVz6subAfWAqwLph2FVc2annvd126yv81">
-                                            <button class="deposits-content__btn btn">Copy</button>
-                                        </form>
-                                        <div class="information__content">
-                                            <div class="information__item"><span>Transfer funds to users of this site WITHOUT COMMISSION</span></div>
-                                            <div class="information__item"><span>Transfers normally take about 1 to 60 minutes to send, on occasion it can take a few hours if the crypto network is slow.</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     </div>

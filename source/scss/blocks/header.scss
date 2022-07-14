@@ -100,6 +100,10 @@ body.active {
     &__profile {
         z-index: 20;
     }
+
+    .in-header-hide {
+        display: none;
+    }
 }
  .logo {
     z-index: 20;
@@ -148,7 +152,7 @@ body.active {
         & .menu__item {
             margin-bottom: 25px;
             & a,  & span{
-                @include adaptive-value("font-size", 30, 20, 1);
+                @include adaptive-value("font-size", 30, 23, 1);
                 line-height: 120%;
 
             }
@@ -182,7 +186,7 @@ body.active {
             cursor: pointer;
             font-family: 'Inter';
             font-style: normal;
-            font-weight: 400;
+            font-weight: 500;
             font-size: clamp(14px, 1.304vw, 15px);
             line-height: 126%;
             color: var(--mainColor);
@@ -293,14 +297,14 @@ body.active {
         & a {
             font-family: 'Inter';
             font-style: normal;
-            font-weight: 400;
+            font-weight: 500;
             font-size: 14.69px;
             line-height: 128%;
             color: var(--checGray);
             display: flex;
             align-items: center;
             @media (max-width: 1350px) {
-                font-size: calc(15px + 13 * ((100vw - 320px)/ 860)) !important;
+                font-size: calc(20px + 10 * ((100vw - 320px)/ 860)) !important;
                 line-height: 125%;
 
             }
@@ -426,6 +430,7 @@ body.active {
     &__image {
         margin-right: 6px;
     }
+
 }
 
 .info-profile {
@@ -482,6 +487,45 @@ body.active {
     }
 }
 
+.dark .log-out svg {
+    fill: #fff;
+}
+.log-out {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    & span {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14.69px;
+        line-height: 128%;
+        color: var(--checGray);
+        white-space: nowrap;
+
+        transition: color .3s ease;
+    }
+    & svg {
+        transition: all .3s ease;
+        fill: #6b6b6b;
+        margin-left: 9px;
+    }
+    @media (max-width: 991px) {
+        & span {
+            font-size: calc(23px + 7 * ((100vw - 320px)/ 860));
+        }
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            & span {
+                color: var(--hoverText);;
+            }
+            & svg {
+                fill: var(--hoverText);
+            }
+        }
+    }
+}
 
 .select_lang-select {
     margin-left: 25px;
@@ -494,6 +538,11 @@ body.active {
     }
     @media (max-width: 991px) {
         margin-left: auto;
+    }
+
+
+    .select-span-text {
+        display: none;
     }
 }
 

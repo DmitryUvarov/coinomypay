@@ -59,7 +59,7 @@ function select_item(select) {
     const select_selected_option_image = select_selected_option.getAttribute('data-image');
     const select_selected_text = select_selected_option.text;
     const select_type = select.getAttribute('data-type');
-
+    const select_selected_option_carency = select_selected_option.getAttribute('data-carency');
 
     const select_selected_image = select.querySelector('option:checked img');
     if (select_items) {
@@ -70,7 +70,7 @@ function select_item(select) {
     if (select_type == 'input') {
         select_type_content = '<div class="select__value icon-select-arrow"><input autocomplete="off" type="text" name="form[]" value="' + select_selected_text + '" data-error="Ошибка" data-value="' + select_selected_text + '" class="select__input"></div>';
     } else if (select_type == 'img') {
-        select_type_content = '<div class="select__value icon-select-arrow"><span><img src="' + select_selected_option_image + '"></span></div>';
+        select_type_content = '<div class="select__value icon-select-arrow"><span><img src="' + select_selected_option_image + '"></span><span class="select-span-text">' + select_selected_text + '</span><span class="in-header-hide">' + select_selected_option_carency + '</span></div>';
     } else {
         select_type_content = '<div class="select__value icon-select-arrow"><span>' + select_selected_text + '</span></div>';
     }
@@ -173,8 +173,9 @@ function select_get_options(select_options) {
             if (select_option_value != '') {
                 const select_option_text = select_option.innerHTML;
                 const select_option_option_image = select_option.getAttribute('data-image');
+                const select_selected_option_carency = select_option.getAttribute('data-carency');
 
-                select_options_content = select_options_content + '<div data-value="' + select_option_value + '" class="select__option"><span class="title-span">' + select_selected_text + '</span><img src="' + select_option_option_image + '"></div>';
+                select_options_content = select_options_content + '<div data-value="' + select_option_value + '" class="select__option"><img src="' + select_option_option_image + '"><span class="title-span">' + select_selected_text + '</span><span class="in-header-hide">' + select_selected_option_carency + '</span></div>';
             }
         }
         return select_options_content;

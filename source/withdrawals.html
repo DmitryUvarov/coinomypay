@@ -22,7 +22,72 @@
                 <div class="transfer__container container">
                     <div class="transfer__body">
                         <h1 class="transfer__title title">Withdraw</h1>
-                        <div class="transfer__tabs deposits-tabs">
+                        <div class="withdrawals__content">
+                            <form action="#" class="form-tabs">
+                                <fieldset class="form-tabs__fieldset">
+                                    <div class="form-tabs__text">
+                                        <div class="form-tabs__title">Select currency</div>
+                                        <div class="form-tabs__subtitle">Choose a cryptocurrency for transfer</div>
+                                    </div>
+                                    <div class="form-tabs__input">
+                                        <select name="transfer" id="" data-type="img">
+                                            <option value="1" data-image="img/btc.png" data-carency="BTC">Bitcoin</option>
+                                            <option value="2" data-image="img/eth.png" data-carency="ETH">Ethereum</option>
+                                            <option value="3" data-image="img/ltc.png" data-carency="LTC">Litecoin</option>
+                                            <option value="4" data-image="img/BCH.png" data-carency="BCH">Bitcoin Cash</option>
+                                            <option value="5" data-image="img/ERC20.png" data-carency="ERC20">Tether</option>
+                                            <option value="6" data-image="img/ERC20.png" data-carency="TRC20">Tether</option>
+                                            <option value="7" data-image="img/SOL.png" data-carency="SOL">Solana</option>
+                                            <option value="8" data-image="img/UNI.png" data-carency="UNI">Uniswap</option>
+                                            <option value="9" data-image="img/TRX.png" data-carency="TRX">TRON</option>
+                                            <option value="10" data-image="img/XRP.png" data-carency="XRP">Ripple</option>
+                                            <option value="11" data-image="img/ETC.png" data-carency="ETC">Ethereum Classic</option>
+                                            <option value="12" data-image="img/DOGE.png" data-carency="DOGE">DogeCoin</option>
+                                            <option value="13" data-image="img/ADA.png" data-carency="ADA">Cardano</option>
+                                            <option value="14" data-image="img/DASH.png" data-carency="DASH">Dash</option>
+                                            <option value="15" data-image="img/BUSD.png" data-carency="BUSD">Binance USD</option>
+                                            <option value="16" data-image="img/USDC.png" data-carency="USDC">USD Coin</option>
+                                            <option value="17" data-image="img/XMR.png" data-carency="XMR">Monero</option>
+                                            <option value="18" data-image="img/BNB.png" data-carency="BNB">Binance Coin</option>
+                                            <option value="19" data-image="img/EOS.png" data-carency="EOS">Eos</option>
+                                            <option value="20" data-image="img/ONT.png" data-carency="ONT">Ontology</option>
+                                            <option value="21" data-image="img/NEO.png" data-carency="NEO">Neo Smart Economy</option>
+                                            <option value="22" data-image="img/LINK.png" data-carency="LINK">Chainlink</option>
+                                            <option value="23" data-image="img/QTUM.png" data-carency="QTUM">Qtum</option>
+                                            <option value="24" data-image="img/KAVA.png" data-carency="KAVA">Kava</option>
+                                            <option value="25" data-image="img/FIL.png" data-carency="FIL">Filecoin</option>
+                                            <option value="26" data-image="img/ATM.png" data-carency="ATM">ATM Fan Coin</option>
+                                            <option value="27" data-image="img/AVA.png" data-carency="AVA">Travala</option>
+                                            <option value="28" data-image="img/CHZ.png" data-carency="CHZ">Chiliz</option>
+                                            <option value="29" data-image="img/COTI.png" data-carency="COTI">COTI</option>
+                                            <option value="30" data-image="img/DGB.png" data-carency="DGB">DigiByte</option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="form-tabs__fieldset">
+                                    <div class="form-tabs__text">
+                                        <div class="form-tabs__title">Destination address</div>
+                                        <div class="form-tabs__subtitle">Please double check this address</div>
+                                    </div>
+                                    <div class="form-tabs__input">
+                                        <input type="text" placeholder="Please enter recipient’s address">
+                                    </div>
+                                </fieldset>
+                                <fieldset class="form-tabs__fieldset">
+                                    <div class="form-tabs__text">
+                                        <div class="form-tabs__title">Amount</div>
+                                        <div class="form-tabs__subtitle">Enter correctly amount</div>
+                                    </div>
+                                    <div class="form-tabs__input">
+                                        <input type="text" placeholder="Please enter an amount">
+                                    </div>
+                                </fieldset>
+                                <fieldset class="form-tabs__fieldset form-tabs__fieldset--btn">
+                                    <button class="form-tabs__btn btn">Transfer Now</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <!-- <div class="transfer__tabs deposits-tabs">
                             <div class="tabs__nav deposits-tabs-nav">
                                 <button class="tabs__nav-btn active deposits-tab-btn" type="button" data-tab="#tab_1">
                                     <img src="img/btc.png" width="21" height="21" alt="">
@@ -136,6 +201,18 @@
                                 </div>
 
                             </div>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="information">
+                <div class="information__container container">
+                    <div class="information__body">
+                        <h4 class="information__title title">Important Information</h4>
+                        <div class="information__content">
+                            <div class="information__item"><span>We strongly recommend that you copy & paste the address to help avoid errors. Please note that we are not responsible for coins mistakenly sent to the wrong address.</span></div>
+                            <div class="information__item"><span>Transactions normally take about 30 to 60 minutes to send, on occasion it can take a few hours if the crypto network is slow.</span></div>
                         </div>
                     </div>
                 </div>

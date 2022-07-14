@@ -41,14 +41,17 @@ margin-bottom: 35px;
     &::-webkit-scrollbar {
         height: 8px;
         width: 0 !important;
+        border-radius: 4px;
     }
 
     &::-webkit-scrollbar-track {
         background-color: #d3d3d3;
+        border-radius: 4px;
     }
 
     &::-webkit-scrollbar-thumb {
         background-color: #0077f6;
+        border-radius: 4px;
     }
 
 
