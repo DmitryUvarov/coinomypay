@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        @@include('_header-small.html', {
+        "nav": true
+        })
+
+        <main>
+
+            <section class="account">
+                <div class="account__container container">
+                    <div class="account__body">
+                        <div class="account__top">Create An Account</div>
+                        <div class="account__bottom">
+                            <form action="#" class="account__form form-account">
+                                <fieldset class="form-account__fieldset">
+                                    <label class="form-account__label" for="">Username</label>
+                                    <input class="form-account__input" type="text" placeholder="Username">
+                                </fieldset>
+                                <fieldset class="form-account__fieldset">
+                                    <label class="form-account__label" for="">Email</label>
+                                    <input class="form-account__input" type="text" placeholder="hello@gmail.com">
+                                </fieldset>
+                                <fieldset class="form-account__fieldset">
+                                    <label class="form-account__label" for="">Password</label>
+                                    <input class="form-account__input" type="text" placeholder="Password">
+                                </fieldset>
+                                <fieldset class="form-account__fieldset">
+                                    <label class="form-account__label" for="">Confirm Password</label>
+                                    <input class="form-account__input" type="text" placeholder="Confirm Password">
+                                </fieldset>
+                                <fieldset class="form-account__fieldset fieldset-checkbox">
+                                    <input id="ch1" type="checkbox">
+                                    <label class="create-token__checkbox checkbox-label" for="ch1"> <span>I have read and agree to Terms of Service and Privacy Policy.</span></label>
+                                </fieldset>
+                                <fieldset class="form-account__fieldset form-account__fieldset--btn">
+                                    <button class="form-account__btn">Create Account </button>
+                                </fieldset>
+                            </form>
+                            <div class="account__have">
+                                Already have an account? <a href="#">Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    @@include('_js.html')
+</body>
+
+</html>

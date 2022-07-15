@@ -1,6 +1,12 @@
 .chat{
     background: var(--tagBody);
     padding-bottom: 30px;
+
+
+
+    & textarea {
+        font-family: 'Inter';
+    }
 }
 
 .chat__title{
@@ -141,6 +147,7 @@
 
 
 .chat__message-input{
+    font-family: 'Inter';
     border: none;
     outline: none;
     background-color: var(--themeColor2);

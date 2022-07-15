@@ -443,8 +443,16 @@ body.active {
         width: 69px;
         height: 69px;
         border-radius: 50%;
-        & img {
 
+        @media (max-width: 991px) {
+            width: 85px;
+            height: 85px;
+        }
+        & img {
+            @media (max-width: 991px) {
+                width: 85px;
+                height: 85px;
+            }
         }
     }
     &__user {
@@ -463,6 +471,7 @@ body.active {
             }
             @media (max-width: 991px) {
                 color: var(--menuColorUser);
+                @include adaptive-value("font-size", 20, 18, 1);
             }
         }
         & > span {
@@ -480,6 +489,10 @@ body.active {
         line-height: 123%;
         color: var(--mainColor);
         margin-bottom: 4px;
+
+        @media (max-width: 991px) {
+            @include adaptive-value("font-size", 30, 24, 1);
+        }
     }
     &__login {
     }

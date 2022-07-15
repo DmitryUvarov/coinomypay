@@ -188,9 +188,6 @@
 .decor {
 	margin: 0 !important;
 	z-index: -1;
-	@media (max-width: 660px) {
-		display: none;
-	}
 }
 .decor-one {
 	position: absolute;
@@ -202,6 +199,15 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	@media (max-width: 660px) {
+		width: 55px;
+		height: 105px;
+
+		& svg {
+			width: 30px;
+		}
+	}
 }
 .decor-two {
 	position: absolute;
@@ -213,6 +219,16 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+
+	@media (max-width: 660px) {
+		width: 55px;
+		height: 105px;
+
+		& svg {
+			width: 30px;
+		}
+	}
 
 }
 .decor-three {
@@ -226,6 +242,16 @@
 	align-items: center;
 	justify-content: center;
 
+
+	@media (max-width: 660px) {
+		width: 55px;
+		height: 40px;
+
+		& svg {
+			width: 40px;
+		}
+	}
+
 }
 .decor-four {
 	background: #005AE6;
@@ -237,4 +263,13 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	@media (max-width: 660px) {
+		width: 55px;
+		height: 40px;
+
+		& svg {
+			width: 40px;
+		}
+	}
 }

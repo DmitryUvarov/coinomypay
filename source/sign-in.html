@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        @@include('_header-small.html', {
+        "nav": true
+        })
+
+        <main>
+
+            <section class="account">
+                <div class="account__container container">
+                    <div class="account__body">
+                        <div class="account__top">Sign in</div>
+                        <div class="account__bottom">
+                            <div class="account__check check-account">
+                                <div class="check-account__title">Please check that you are visiting the correct URL</div>
+                                <div class="check-account__content">
+                                    <svg width="13.25" height="17.66">
+                                        <use xlink:href="img/sprite.svg#lock"></use>
+                                    </svg>
+                                    <span><strong>https://</strong>coinomypay.com/signin</span>
+                                </div>
+                            </div>
+                            <form action="#" class="account__form form-account">
+                                <fieldset class="form-account__fieldset">
+                                    <label class="form-account__label" for="">Email</label>
+                                    <input class="form-account__input" type="text" placeholder="hello@gmail.com">
+                                </fieldset>
+                                <fieldset class="form-account__fieldset">
+                                    <label class="form-account__label" for="">Password</label>
+                                    <input class="form-account__input" type="text" placeholder="Password">
+                                </fieldset>
+                                <fieldset class="form-account__fieldset fieldset-checkbox">
+                                    <input id="ch1" type="checkbox">
+                                    <label class="create-token__checkbox checkbox-label" for="ch1"> <span>Remember me</span></label>
+                                </fieldset>
+                                <fieldset class="form-account__fieldset form-account__fieldset--btn">
+                                    <button class="form-account__btn">Sign in</button>
+                                </fieldset>
+                            </form>
+                            <div class="account__have">
+                                Don't have an account? <a href="#">Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    @@include('_js.html')
+</body>
+
+</html>
