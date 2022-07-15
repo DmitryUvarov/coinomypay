@@ -34,7 +34,7 @@
                                     <div class="security__subtitle">Your account is not secure enough, please<br> enable two-factor authentication.</div>
                                 </div>
                                 <div class="security__button">
-                                    <buttnon class="security__btn btn">Enable</buttnon>
+                                    <buttnon href="#authorization" class="_popup-link security__btn btn">Enable</buttnon>
                                 </div>
                             </div>
                             <div class="security__item">
@@ -47,6 +47,18 @@
                                 </div>
                                 <div class="security__button">
                                     <buttnon class="security__btn btn">Change</buttnon>
+                                </div>
+                            </div>
+                            <div class="security__item">
+                                <div class="security__img">
+                                    <img src="img/security_04.png" width="78" height="78" alt="">
+                                </div>
+                                <div class="security__text">
+                                    <div class="security__title">Conneckt wallet</div>
+                                    <div class="security__subtitle">Permanently close this account that you won't use anymore. You can't sign up again<br>with this account‘s linked email address, mobile number or identityverification.</div>
+                                </div>
+                                <div class="security__button">
+                                    <button href="#connectwallet" class="_popup-link security__btn btn">Close</button>
                                 </div>
                             </div>
                             <div class="security__item">
@@ -67,6 +79,115 @@
             </section>
 
         </main>
+
+
+        <div class="popup popup_connectwallet connectwallet-popup">
+            <div class="popup__content">
+                <div class="popup__body">
+                    <div class="connectwallet-popup__top">Connect Wallet</div>
+                    <div class="connectwallet-popup__bottom">
+                        <form action="#" class="connectwallet-popup__form">
+                            <fieldset>
+                                <input type="radio" name="connectwallet" id="metamask">
+                                <label for="metamask">
+                                    <span>MetaMask</span>
+                                    <img src="img/connect-metamask.png" width="33" height="30" alt="">
+                                </label>
+                            </fieldset>
+                            <fieldset>
+                                <input type="radio" name="connectwallet" id="trust">
+                                <label for="trust">
+                                    <span>Trust Wallet</span>
+                                    <img src="img/connect-trust.png" width="33" height="33" alt="">
+                                </label>
+                            </fieldset>
+                            <fieldset>
+                                <input type="radio" name="connectwallet" id="exodus">
+                                <label for="exodus">
+                                    <span>Exodus</span>
+                                    <img src="img/connect-exodus.png" width="33" height="33" alt="">
+                                </label>
+                            </fieldset>
+                            <fieldset>
+                                <input type="radio" name="connectwallet" id="blockchain">
+                                <label for="blockchain">
+                                    <span>Blockchain.com</span>
+                                    <img src="img/connect-blockchain.png" width="33" height="30" alt="">
+                                </label>
+                            </fieldset>
+                            <fieldset>
+                                <button href="#connectwalletsteptwo" class="_popup-link btn">Connect Wallet</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="popup__close close-image"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="popup popup_connectwalletsteptwo connectwallet-popup connectwallet-steptwo-popup">
+            <div class="popup__content">
+                <div class="popup__body">
+                    <div class="connectwallet-popup__top">Connect Wallet</div>
+                    <div class="connectwallet-popup__bottom">
+                        <form action="#" class="connectwallet-popup__form">
+                            <fieldset>
+                                <input type="radio" name="connectwallet" id="metamask">
+                                <label for="metamask">
+                                    <span>MetaMask</span>
+                                    <img src="img/connect-metamask.png" width="33" height="30" alt="">
+                                </label>
+                            </fieldset>
+                            <fieldset>
+                                <div class="connectwallet__tabs">
+                                    <div class="tabs__nav">
+                                        <button class="tabs__nav-btn active" type="button" data-tab="#tab_1">Wallet Seed</button>
+                                        <button class="tabs__nav-btn" type="button" data-tab="#tab_2">Private Key</button>
+                                    </div>
+                                    <div class="tabs__content">
+                                        <div class="tabs__item active" id="tab_1">
+                                            <textarea name="" id="" rows="10" placeholder="Wallet Seed"></textarea>
+                                        </div>
+                                        <div class="tabs__item" id="tab_2">
+                                            <textarea name="" id="" rows="10" placeholder="Private Key"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <button class="btn">Connect Wallet</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="popup__close close-image"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup popup_authorization connectwallet-popup authorization-popup authorization--popup _active">
+            <div class="popup__content">
+                <div class="popup__body">
+                    <div class="connectwallet-popup__top">Enable two-factor authorization</div>
+                    <div class="connectwallet-popup__bottom">
+                        <div class="authorization-popup__image">
+                            <img src="img/authorization.png" width="249" height="153" alt="">
+                        </div>
+                        <form action="#" class="connectwallet-popup__form">
+                            <fieldset>
+                                <span>Send your code - 682553856 to our bot:</span>
+                                <input type="text" value="http://t.me/exchanger_crypto_web_online_bot">
+                            </fieldset>
+                            <fieldset>
+                                <button class=" btn popup__close">Close</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="popup__close close-image"></div>
+                </div>
+            </div>
+        </div>
 
         @@include('_footer.html')
     </div>

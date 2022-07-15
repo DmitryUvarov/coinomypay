@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        @@include('_header.html', {
+        "nav": true
+        })
+
+        <main>
+
+            <section class="bonus-main">
+                <div class="bonus-main__container container">
+                    <div class="bonus-main__body">
+                        <div class="bonus-main__content">
+                            <h1 class="bonus-main__title">Welcome Bonus </h1>
+                            <p class="bonus-main__text">Complete the tasks below to earn NOW</p>
+                        </div>
+                        <div class="bonus-main__image">
+                            <img src="img/bonus.svg" width="354" height="354" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bonus">
+                <div class="bonus__container container">
+                    <div class="bonus__body">
+                        <div class="bonus__item item-bonus">
+                            <div class="item-bonus__image">
+                                <img src="img/bonus-ico01.svg" width="103" height="103" alt="">
+                            </div>
+                            <div class="item-bonus__content">
+                                <div class="item-bonus__title">Referral Bonus</div>
+                                <div class="item-bonus__text">Copy code of your friend, go to the "Balance" tab, enter the code in the field and click "Activate".
+                                    Note that the code must be 8-12 characters and must not contain spaces. After activation, funds
+                                    will be credited to your account.</div>
+                                <div class="item-bonus__link">Get Referral Bonus</div>
+                            </div>
+                            <button class="item-bonus__btn ntm">Join Now</button>
+                        </div>
+                        <div class="bonus__item item-bonus">
+                            <div class="item-bonus__image">
+                                <img src="img/bonus-ico01.svg" width="103" height="103" alt="">
+                            </div>
+                            <div class="item-bonus__content">
+                                <div class="item-bonus__title">200% second deposit bonus</div>
+                                <div class="item-bonus__text">Each new user who makes a deposit gets 200% bonus on his balance. This offer is valid only for
+                                    the second deposit. Minimum deposit is 0.005 BTC or equivalent in another cryptocurrency.</div>
+                                <div class="item-bonus__link">Get Referral Bonus</div>
+                            </div>
+                            <button class="item-bonus__btn ntm">Join Now</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="rules">
+                <div class="rules__container container">
+                    <h3>Rules</h3>
+                    <div class="rules__body">
+                        <p>The welcome bonus is only for the second deposit.</p>
+                        <p>Each bonus can only be obtained once. It is forbidden to create accounts for several of your identity documents. If you used an id card
+                            during verification, it is forbidden to re-register for a driver's license.</p>
+                        <p>It is forbidden to create multi-accounts to receive bonuses.</p>
+                        <p>It is forbidden to enter not your own data during verification. All documents are checked through an international personal database.</p>
+                        <p>If you have difficulty completing tasks or want to change some data please contact our Support Team.</p>
+                        <p> Exchange reserves the right to disqualify users who perform any dishonest behavior or suspend accounts for any proven
+                            multi-account registration.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="rules">
+                <div class="rules__container container">
+                    <h3>FAQ</h3>
+                    <div class="rules__body">
+                        <h4>How to activate Promo Code?</h4>
+                        <p>Copy the code of your friend, go to the "Balance" tab, enter the code in the field and click "Activate". Note that the code must
+                            be 8-12 characters and must not contain spaces. To activate the code, you have to first pass the verification.</p>
+                        <h4>How to get 200% first deposit bonus?</h4>
+                        <p>To double your second deposit you have to follow these steps: 1. Register on the exchange. 2. Create a deposit request. Minimum
+                            deposit is 0.005 BTC or equivalent in another cryptocurrency. 3. After 6 confirmations on the bitcoin network or 12 confirmations
+                            on the ethereum network a double deposit will be credited to your account.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="dark-bg bonus-bg">
+                <img src="img/bonusbg-dark.png">
+            </div>
+            <div class="ligth-bg bonus-bg">
+                <img src="img/bonusbg-ligth.png">
+            </div>
+        </main>
+
+        @@include('_footer.html')
+    </div>
+
+    @@include('_js.html')
+</body>
+
+</html>

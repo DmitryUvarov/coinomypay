@@ -9,7 +9,7 @@
     &__body {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 147px);
+        grid-template-rows: max-content 147px;
         grid-template-areas:
         "a b"
         "a c"
@@ -180,9 +180,14 @@
 
 
 .cryptocurrency {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
+    @media (max-width: 660px) {
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 
+    @media (max-width: 767px) {
+
+    }
 
     &::-webkit-scrollbar {
         height: 8px;
@@ -212,6 +217,7 @@
         padding: 0;
     }
     .tbody {
+
     }
     & tr, & td {
     }
@@ -220,48 +226,51 @@
         & tr {
 
             border: 0;
-            @media (min-width: 1350px) {
-                padding: 15px 27px;
-            }
+
         }
         & th {
-            padding: 0;
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
-            font-size: 15px;
+            font-size: clamp(13px, 1.304vw, 15px);
             line-height: 120%;
             color: var(--mainColor);
-            @media (max-width: 1350px) {
-                padding: 16px 15px;
-            }
-            &:first-child {
-                width: 42.6%;
-            }
-            &:nth-child(2) {
-                width: 22.4%;
-            }
-            &:nth-child(3) {
-                width: 22.7%;
-                padding-left: 10px;
-            }
-            &:last-child {
-                width: 14.3%;
-            }
-            @media (max-width: 1350px) {
-                width: 250px !important;
 
-                &:nth-child(2) {
-                    padding-left: 42px;
-                }
-                &:nth-child(3) {
-                    width: 100px !important;
-                    padding-left: 49px;
-                }
-                &:last-child {
-                    width: 200px !important;
+            &:nth-child(3) {
+                @media (max-width: 767px) {
+                    display: none;
                 }
             }
+            // @media (max-width: 1350px) {
+            //     padding: 16px 15px;
+            // }
+            // &:first-child {
+            //     width: 42.6%;
+            // }
+            // &:nth-child(2) {
+            //     width: 22.4%;
+            // }
+            // &:nth-child(3) {
+            //     width: 22.7%;
+            //     padding-left: 10px;
+            // }
+            // &:last-child {
+            //     width: 14.3%;
+            // }
+            // @media (max-width: 991px) {
+            //     width: 250px !important;
+
+            //     &:nth-child(2) {
+            //         padding-left: 42px;
+            //     }
+            //     &:nth-child(3) {
+            //         width: 100px !important;
+            //         padding-left: 49px;
+            //     }
+            //     &:last-child {
+            //         width: 200px !important;
+            //     }
+            // }
         }
     }
     & tbody {
@@ -287,73 +296,92 @@
         }
     }
     & tr {
-        @media (min-width: 1350px) {
-            display: flex;
-            align-items: center;
+        // @media (min-width: 991px) {
+        //     display: flex;
+        //     align-items: center;
 
-        }
-        display: flex;
-        align-items: center;
+        // }
+        // display: flex;
+        // align-items: center;
     }
     & td {
-        padding: 15px 25px;
-        @media (min-width: 1350px) {
-            display: flex;
-            align-items: center;
-
-        }
-        display: flex;
-        align-items: center;
-        margin: 0 9px 0 8px;
-
+        vertical-align: middle;
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
-        font-size: clamp(15px, 1.478vw, 17px);
+        font-size: clamp(12px, 1.478vw, 17px);
         line-height: 123%;
         color: var(--mainColor);
 
-        &:first-child {
-            width: 42.6%;
-        }
-        &:nth-child(2) {
-            width: 22.4%;
+        // &:first-child {
+        //     width: 42.6%;
+        // }
+        // &:nth-child(2) {
+        //     width: 22.4%;
+        // }
+        // &:nth-child(3) {
+        //     width: 22.7%;
+        //     padding-left: 10px;
+        // }
+        // &:last-child {
+        //     width: 14.3%;
+        // }
+
+        // @media (max-width: 991px) {
+        //     width: 250px !important;
+
+        //     &:nth-child(3) {
+        //         width: 100px !important;
+        //     }
+        //     &:last-child {
+        //         width: 200px !important;
+        //     }
+        // }
+
+        &:last-child {
+            text-align: end;
         }
         &:nth-child(3) {
-            width: 22.7%;
-            padding-left: 10px;
-        }
-        &:last-child {
-            width: 14.3%;
-        }
-
-        @media (max-width: 1350px) {
-            width: 250px !important;
-
-            &:nth-child(3) {
-                width: 100px !important;
-            }
-            &:last-child {
-                width: 200px !important;
+            @media (max-width: 767px) {
+                display: none;
             }
         }
+        & img, & picture {
+            vertical-align: middle;
+            margin-top: -3px;
+        }
+        & img {
+            margin-right: 8px;
+            @media (max-width: 660px) {
+                width: 20px;
+                height: 20px;
+                margin-right: 4px;
+            }
+        }
+
         & .name-wallet {
-            margin: 0 9px 0 8px;
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
-            font-size: clamp(15px, 1.478vw, 17px);
+            font-size: clamp(12px, 1.478vw, 17px);
             line-height: 123%;
             color: var(--mainColor);
 
         }
         & .small-wallet {
+            margin-left: 9px;
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
-            font-size: clamp(15px, 1.478vw, 17px);
+            font-size: clamp(13px, 1.478vw, 17px);
             line-height: 123%;
             color: #8B97C1;
+
+            @media (max-width: 660px) {
+                width: 20px;
+                height: 20px;
+                margin-left: 5px;
+            }
 
         }
         & button {
@@ -362,14 +390,19 @@
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
-            font-size: 12px;
+            font-size: clamp(11px, 1.043vw, 12px);
             line-height: 125%;
             color: var(--mainColor);
             padding: 7px 14px;
             border-radius: 4px;
-
+            @media (max-width: 660px) {
+                padding: 5px 10px;
+            }
             &:not(:last-child) {
                 margin-right: 10px;
+                @media (max-width: 660px) {
+                    margin-right: 7px;
+                }
             }
 
             &.deposit {

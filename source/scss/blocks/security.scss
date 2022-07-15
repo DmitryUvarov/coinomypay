@@ -87,3 +87,207 @@
         }
     }
 }
+
+
+
+
+.popup_connectwallet {
+
+    ._active {
+    }
+    .popup__content {
+    }
+
+
+    .btn {
+    }
+    .popup__close {
+    }
+    .close-plus {
+    }
+
+}
+.connectwallet-popup {
+
+    .popup__body {
+        max-width: 500px;
+        background: var(--themeColor2);
+        border: 1px solid var(--tableBorder);
+        border-radius: 9px;
+        padding: 0;
+    }
+    &__top {
+        padding: 17px;
+        background: var(--themeColor2);
+        border: 1px solid var(--tableBorder);
+        border-radius: 9px;
+        margin-bottom: -10px;
+        z-index: 10;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: clamp(16px, 1.739vw, 20.7339px);
+        line-height: 122%;
+        color: var(--mainColor);
+
+    }
+    &__bottom {
+        padding: 32px 17px 22px;
+    }
+    &__form {
+
+
+        & fieldset {
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-top: 30px;
+                margin-bottom: 0;
+            }
+        }
+        & input {
+            display: none;
+
+            &:checked ~ label {
+                outline: 1px solid #1A66FF;
+            }
+        }
+        & label {
+            background: linear-gradient(90.78deg, #293C96 0%, #2F4CD9 100%), #2D41A3;
+            border-radius: 9px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+
+            & span {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 122%;
+                color: #FFFFFF;
+
+            }
+        }
+
+        & button {
+            width: 100%;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            border-radius: 9px;
+        }
+    }
+
+    .connectwallet__tabs {
+
+    }
+    .tabs__nav {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+    .tabs__nav-btn {
+        position: relative;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11.1176px;
+        line-height: 13px;
+        width: max-content;
+        color: var(--tableHead);
+        &.active {
+            color: var(--mainColor);
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: #1A66FF;
+                height: 1px;
+                width: 100%;
+                bottom: -3px;
+                left: 0;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 17px;
+        }
+    }
+    .active {
+    }
+    .tabs__content {
+    }
+    .tabs__item {
+
+        & textarea {
+             width: 100%;
+            resize: none;
+            padding: 13px 10px;
+            background: var(--textarea);
+            border: 1px solid var(--tableBorder);
+            border-radius: 9px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11.1176px;
+            line-height: 13px;
+            color: var(--mainColor);
+
+
+            &::placeholder {
+                color: var(--tableHead);
+            }
+            &:focus {
+                outline: 0;
+            }
+        }
+    }
+}
+
+
+.authorization-popup {
+
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 35px;
+    }
+    & fieldset{
+        text-align: center;
+    }
+    & span {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.066px;
+        line-height: 18px;
+        color: var(--mainColor);
+        text-align: center;
+    }
+    & input {
+        display: block;
+        width: 100%;
+        padding: 12px 48px;
+        background: var(--textarea);
+        border: 1px solid var(--tableBorder);
+        border-radius: 9px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17.0166px;
+        line-height: 123%;
+        color: var(--mainColor);
+        margin-top: 6px;
+
+       &::placeholder {
+           color: var(--tableHead);
+       }
+       &:focus {
+           outline: 0;
+       }
+   }
+}
