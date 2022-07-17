@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+body._lock {
+  overflow: hidden;
+}
 html.light {
 
   & footer {
@@ -99,7 +102,7 @@ html {
       white-space: nowrap;
 
       @media (max-width: 991px) {
-        font-size: calc(23px + 7 * ((100vw - 320px)/ 860));
+        font-size: 16px;
       }
     }
     & svg {
@@ -296,4 +299,9 @@ input[type="number"] {
 
 main {
   position: relative;
+}
+
+
+.tabs__nav-btn {
+  border-radius: 4px 4px 0 0;
 }

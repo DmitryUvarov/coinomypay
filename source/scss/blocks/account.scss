@@ -144,8 +144,8 @@
         display: block;
         font-family: 'Inter';
         font-style: normal;
-        font-weight: 500;
-        font-size: 17px;
+        font-weight: 400;
+        font-size: 15px;
         line-height: 123%;
         color: #FFFFFF;
         background: #0077F6;
@@ -164,7 +164,7 @@
                 align-self: flex-start;
             }
             &::after {
-                top: -1px;
+
             }
         }
         & span {
