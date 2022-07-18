@@ -175,6 +175,14 @@
 
 .chat__message-send{
     flex-basis: 20%;
+
+
+    transition: all .3s ease;
+    @media (any-hover: hover) {
+        &:hover {
+            background: #1346CC;
+        }
+    }
 }
 
 

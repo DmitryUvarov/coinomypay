@@ -13,14 +13,14 @@
     &__title {
         position: relative;
         background: var(--themeColor2);
-        font-weight: 600;
-        font-size: clamp(14px,1.391vw,16.9565px);
+        font-weight: 500;
+        font-size: clamp(14px, 1.565vw, 18px);
         line-height: 123%;
         color: var(--mainColor);
         border: 1px solid var(--tableBorder);
         border-radius: 8px;
         margin-bottom: -20px;
-        padding: 25px 19px;
+        padding: 13px 19px;
     }
     &__content {
         padding-top: 20px;
@@ -65,7 +65,6 @@
             align-self: flex-start;
         }
         &::after {
-            top: -1px
         }
     }
     & .fieldset-btn {
@@ -77,8 +76,14 @@
          & button {
             font-weight: 400;
             padding: 10px 12px;
-            font-size: 15.8203px;
+            font-size: 15px;
             line-height: 126%;
+            transition: all .3s ease;
+            @media (any-hover: hover) {
+                &:hover {
+                    background: #1346CC;
+                }
+            }
          }
     }
     .create-token__btn {
@@ -143,7 +148,7 @@
         & svg {
             cursor: pointer;
             position: absolute;
-            top: 8px;
+            top: 9.3px;
             right: 9px;
             fill: var(--mainColor);
         }
@@ -183,7 +188,6 @@
 
         & span {
             white-space: normal;
-            font-size: clamp(14px, 1.304vw, 15.619px);
         }
     }
     & .fieldset-btn {

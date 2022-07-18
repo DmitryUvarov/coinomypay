@@ -38,12 +38,24 @@
         }
     }
     &__link {
+        padding: 8px 15px;
+        background: #0077F6;
+        border-radius: 5px;
         font-family: 'Montserrat';
         font-style: normal;
-        font-weight: 600;
-        font-size: clamp(14px, 1.304vw, 15.0567px);
-        line-height: 120%;
-        color: #1346CC;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        color: #FFFFFF;
+
+
+        transition: all .3s ease;
+        @media (any-hover: hover) {
+            &:hover {
+                background: #1346CC;
+            }
+        }
+
     }
 }
 
@@ -79,8 +91,8 @@
 
         font-family: 'Inter';
         font-style: normal;
-        font-weight: 600;
-        font-size: clamp(14px, 1.391vw, 16.9565px);
+        font-weight: 500;
+        font-size: clamp(14px, 1.565vw, 18px);
         line-height: 131%;
         color: var(--mainColor);
         background: var(--themeColor2);
@@ -198,8 +210,8 @@
     &__title {
         font-family: 'Inter';
         font-style: normal;
-        font-weight: 600;
-        font-size: clamp(14px, 1.391vw, 16.9565px);
+        font-weight: 500;
+        font-size: clamp(14px, 1.565vw, 18px);
         line-height: 131%;
         color: var(--mainColor);
 

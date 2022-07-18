@@ -5,11 +5,18 @@
     border-radius: 0px 9px 9px 0px;
     font-family: 'Inter';
     font-style: normal;
+    font-size: 15px;
     font-weight: 400;
-    font-size: clamp(14px, 1.304vw, 15.3016px);
     line-height: 125%;
     color: #FFFFFF;
     padding: 9.2px 15px 8.8px;
+
+    transition: all .3s ease;
+    @media (any-hover: hover) {
+        &:hover {
+            background: #1346CC;
+        }
+    }
 }
 
 .title {
@@ -75,7 +82,7 @@ html.dark {
 
 }
 .checkbox-label {
-
+    cursor: pointer;
     display: flex;
     align-items: center;
     width: max-content;
@@ -104,7 +111,7 @@ html.dark {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
-        font-size: clamp(12px, 1.304vw, 15.619px);
+        font-size: 12px;
         line-height: 126%;
         color: var(--checGray);
         white-space: nowrap;

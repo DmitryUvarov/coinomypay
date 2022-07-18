@@ -32,6 +32,10 @@ html.light {
     .blue-mode {
       display: block;
     }
+
+    & p {
+      color: #000;
+    }
   }
 }
 html.dark {

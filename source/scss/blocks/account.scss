@@ -7,11 +7,11 @@
     &__body {
     }
     &__top {
-        padding: 18px 30px;
+        padding: 13px 30px;
         font-family: 'Inter';
         font-style: normal;
-        font-weight: 400;
-        font-size: clamp(20px, 2.348vw, 27px);
+        font-weight: 500;
+        font-size: clamp(14px, 1.565vw, 18px);
         line-height: 122%;
         color: var(--mainColor);
         border: 1px solid var(--tableBorder);
@@ -117,7 +117,7 @@
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
-        font-size: clamp(16px, 1.652vw, 19.8817px);
+        font-size: clamp(16px, 1.478vw, 17px);
         line-height: 126%;
         color: var(--mainColor);
         margin-bottom: 4px;
@@ -151,6 +151,13 @@
         background: #0077F6;
         border-radius: 9px;
         padding: 12px 15px;
+
+        transition: all .3s ease;
+        @media (any-hover: hover) {
+            &:hover {
+                background: #1346CC;
+            }
+        }
 
     }
 

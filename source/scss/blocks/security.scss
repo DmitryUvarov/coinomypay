@@ -76,7 +76,8 @@
         text-align: center;
         width: max-content;
         border-radius: 9px;
-        font-size: clamp(18px, 1.739vw, 20.1676px);
+        font-size: 15px;
+        font-weight: 400;
         line-height: 120%;
 
         color: #FFFFFF;
@@ -116,7 +117,7 @@
         padding: 0;
     }
     &__top {
-        padding: 17px;
+        padding: 13px 17px;
         background: var(--themeColor2);
         border: 1px solid var(--tableBorder);
         border-radius: 9px;
@@ -125,7 +126,7 @@
         font-family: 'Inter';
         font-style: normal;
         font-weight: 500;
-        font-size: clamp(16px, 1.739vw, 20.7339px);
+        font-size: clamp(16px, 1.565vw, 18px);
         line-height: 122%;
         color: var(--mainColor);
 
@@ -172,8 +173,8 @@
 
         & button {
             width: 100%;
-            font-weight: 500;
-            font-size: 18px;
+            font-weight: 400;
+            font-size: 15px;
             line-height: 22px;
             border-radius: 9px;
         }

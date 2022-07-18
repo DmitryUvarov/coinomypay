@@ -12,6 +12,8 @@
         margin-bottom: -5px;
         background: var(--themeColor2);
         border-color: var(--tableBorder);
+        font-size: 18px;
+        font-weight: 500;
     }
     &__form {
         border: 1px solid var(--tableBorder);
@@ -46,5 +48,12 @@
         border-radius: 6px;
         padding: 5px 6px;
         margin-top: 10px;
+
+        transition: all .3s ease;
+        @media (any-hover: hover) {
+            &:hover {
+                background: #1346CC;
+            }
+        }
     }
 }

@@ -141,6 +141,13 @@
         padding: 13px 33px;
         background: #0077F6;
         border-radius: 8px;
+
+        transition: all .3s ease;
+        @media (any-hover: hover) {
+            &:hover {
+                background: #1346CC;
+            }
+        }
     }
     .ntm {
     }

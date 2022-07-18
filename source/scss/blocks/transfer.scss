@@ -7,14 +7,14 @@
     &__title {
         position: relative;
         background: var(--themeColor2);
-        font-weight: 600;
-        font-size: clamp(14px, 1.391vw, 16.9565px);
+        font-weight: 500;
+        font-size: clamp(14px, 1.565vw, 18px);
         line-height: 123%;
         color: var(--mainColor);
         border: 1px solid var(--tableBorder);
         border-radius: 8px;
         margin-bottom: -10px;
-        padding: 15px 18px 15px;
+        padding: 13px 18px;
     }
 
     &__tabs {
@@ -266,9 +266,9 @@
         font-weight: 400;
         padding: 5px 17px;
         margin-left: auto;
-        font-size: 18px;
+        font-size: 15px;
         line-height: 122%;
-        border-radius: 6px;
+        border-radius: 5px;
 
         @media (max-width: 767px) {
             width: 100%;

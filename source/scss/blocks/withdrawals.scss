@@ -78,7 +78,7 @@
         font-family: 'Inter';
         font-style: normal;
         font-weight: 500;
-        font-size: clamp(16px, 1.739vw, 20.7339px);
+        font-size: clamp(16px, 1.565vw, 18px);
         line-height: 25px;
         color: var(--mainColor);
         text-align: center;
@@ -92,7 +92,7 @@
         font-family: 'Inter';
         font-style: normal;
         font-weight: 600;
-        font-size: clamp(24px, 3.391vw, 39.649px);
+        font-size: clamp(24px, 2.609vw, 30px);
         line-height: 48px;
         color: var(--mainColor);
         text-align: center;
@@ -123,8 +123,8 @@
         background: #0077F6;
         border-radius: 9px;
         width: 100%;
-        font-weight: 500;
-        font-size: 18px;
+        font-weight: 400;
+        font-size: 15px;
         line-height: 22px;
         @media (max-width: 767px) {
             margin-top: 15px;
